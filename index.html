@@ -130,7 +130,7 @@
       <div class="stats-grid">
         <div class="stat-card">
           <span class="stat-card-icon">🐾</span>
-          <div class="stat-card-num" data-count="41415">0</div>
+          <div class="stat-card-num" data-count="47187">0</div>
           <div class="stat-card-label">Spesies Terancam</div>
           <div class="stat-card-trend trend-down">↑ 4% tahun ini</div>
         </div>
@@ -573,16 +573,16 @@
             <span class="status-badge" id="popupStatus"></span>
           </div>
           <div class="timeline-control">
-            <span class="timeline-label">Linimasa Populasi</span>
-            <input
-              type="range"
-              class="timeline-slider"
-              id="timelineSlider"
-              min="1970"
-              max="2024"
-              value="2024"
-            />
-            <span class="timeline-year" id="timelineYear">2024</span>
+            <span class="timeline-label">Sumber Data</span>
+            <span
+              style="
+                color: rgba(255, 255, 255, 0.4);
+                font-size: 0.78rem;
+                flex: 1;
+              "
+              >IUCN Red List · WWF Living Planet Report</span
+            >
+            <span class="timeline-year">2025</span>
           </div>
         </div>
       </div>
@@ -614,12 +614,12 @@
         </div>
         <div class="chart-card wide">
           <h4>Risiko Regional</h4>
-          <h3>Spesies Terancam Berdasarkan Wilayah</h3>
+          <h3>% Spesies Terancam per Kelompok Taksonomi</h3>
           <div class="chart-wrapper"><canvas id="regionalChart"></canvas></div>
         </div>
         <div class="chart-card">
-          <h4>Kemajuan Pemulihan</h4>
-          <h3>Hasil Konservasi</h3>
+          <h4>Penurunan Per Wilayah</h4>
+          <h3>% Penurunan Populasi Satwa per Wilayah (1970–2020)</h3>
           <div class="chart-wrapper"><canvas id="recoveryChart"></canvas></div>
         </div>
       </div>
@@ -663,7 +663,7 @@
               </div>
               <div class="animal-meta-item">
                 <div class="animal-meta-val">▼ 84%</div>
-                <div class="animal-meta-key">Penurunan</div>
+                <div class="animal-meta-key">Est. Penurunan</div>
               </div>
             </div>
           </div>
@@ -692,7 +692,7 @@
               </div>
               <div class="animal-meta-item">
                 <div class="animal-meta-val">▼ 70%</div>
-                <div class="animal-meta-key">Penurunan</div>
+                <div class="animal-meta-key">Est. Penurunan</div>
               </div>
             </div>
           </div>
@@ -717,12 +717,12 @@
                 <div class="animal-meta-key">Pop. Liar</div>
               </div>
               <div class="animal-meta-item">
-                <div class="animal-meta-val">Kalimantan</div>
+                <div class="animal-meta-val">Sumatra</div>
                 <div class="animal-meta-key">Habitat</div>
               </div>
               <div class="animal-meta-item">
                 <div class="animal-meta-val">▼ 80%</div>
-                <div class="animal-meta-key">Penurunan</div>
+                <div class="animal-meta-key">Est. Penurunan</div>
               </div>
             </div>
           </div>
@@ -750,7 +750,7 @@
               </div>
               <div class="animal-meta-item">
                 <div class="animal-meta-val">▼ 90%</div>
-                <div class="animal-meta-key">Penurunan</div>
+                <div class="animal-meta-key">Est. Penurunan</div>
               </div>
             </div>
           </div>
@@ -806,7 +806,7 @@
               </div>
               <div class="animal-meta-item">
                 <div class="animal-meta-val">▼ 43%</div>
-                <div class="animal-meta-key">Penurunan</div>
+                <div class="animal-meta-key">Est. Penurunan</div>
               </div>
             </div>
           </div>
@@ -1059,7 +1059,7 @@
         </h2>
         <div class="impact-cards">
           <div class="impact-card">
-            <div class="impact-num" data-count="2847">0</div>
+            <div class="impact-num" data-count="169420">0</div>
             <div class="impact-label">Kejadian Diselesaikan</div>
             <p class="impact-desc">
               Berhasil menangani kejadian satwa liar, dari penindakan perburuan
@@ -1067,7 +1067,7 @@
             </p>
           </div>
           <div class="impact-card">
-            <div class="impact-num" data-count="127">0</div>
+            <div class="impact-num" data-count="260000" data-suffix="+">0</div>
             <div class="impact-label">Spesies Dipantau</div>
             <p class="impact-desc">
               Spesies yang aktif dilacak dengan kalung satelit, jebakan kamera,
@@ -1075,7 +1075,7 @@
             </p>
           </div>
           <div class="impact-card">
-            <div class="impact-num" data-count="48">0</div>
+            <div class="impact-num" data-count="183">0</div>
             <div class="impact-label">Negara Terlibat</div>
             <p class="impact-desc">
               Negara mitra yang berkontribusi ranger, data, dan dukungan

@@ -80,7 +80,7 @@ function handleParallax() {
       // A. DINAMIK MARGIN (Ini inti permintaanmu)
       // Begitu forestSection masuk layar, kita tarik margin-top ke atas.
       // Multiplier 0.25 berarti setiap scroll 100px, margin naik 25px ekstra.
-      forestSection.style.marginTop = `${dynamicMargin}px`;
+      forestSection.style.marginTop = `0px`;
 
       // B. INTERNAL LAYER PARALLAX (Efek kedalaman di dalam hutan)
       // Kita gunakan viewIn sebagai basis agar sinkron dengan tarikan margin
@@ -195,15 +195,6 @@ document.querySelectorAll(".map-region").forEach((region) => {
     popup.style.top = py + "px";
   });
 });
-
-document
-  .getElementById("timelineSlider")
-  .addEventListener("input", function () {
-    document.getElementById("timelineYear").textContent = this.value;
-    const pct = ((this.value - 1970) / (2024 - 1970)) * 100;
-    this.style.background = `linear-gradient(90deg, var(--forest-mid) ${pct}%, rgba(245,242,236,.08) ${pct}%)`;
-  });
-
 function toggleLayer(btn) {
   btn.classList.toggle("active");
 }
@@ -235,7 +226,7 @@ new Chart(document.getElementById("populationChart").getContext("2d"), {
     datasets: [
       {
         label: "Indeks Populasi Satwa Liar",
-        data: [100, 94, 88, 80, 73, 67, 61, 56, 52, 46, 38, 32],
+        data: [100, 95, 89, 83, 78, 72, 66, 60, 54, 45, 28, 27],
         borderColor: "#c0392b",
         backgroundColor: "rgba(192,57,43,0.06)",
         fill: true,
@@ -290,27 +281,25 @@ new Chart(document.getElementById("populationChart").getContext("2d"), {
   },
 });
 
-// Causes doughnut
+// Causes doughnut — Sumber: IPBES Global Assessment 2019 + IUCN
 new Chart(document.getElementById("causesChart").getContext("2d"), {
   type: "doughnut",
   data: {
     labels: [
       "Hilangnya Habitat",
-      "Perburuan Liar",
+      "Eksploitasi Berlebihan",
       "Perubahan Iklim",
-      "Polusi",
       "Spesies Invasif",
-      "Penyakit",
+      "Polusi & Penyakit",
     ],
     datasets: [
       {
-        data: [38, 22, 18, 10, 7, 5],
+        data: [50, 24, 13, 9, 4],
         backgroundColor: [
           "#2d6e2d",
           "#c0392b",
           "#1e6080",
           "#d4870a",
-          "#c9a84c",
           "#6d4c41",
         ],
         borderWidth: 0,
@@ -337,36 +326,34 @@ new Chart(document.getElementById("causesChart").getContext("2d"), {
 });
 
 // Regional bar
+// Regional bar — diganti ke data per taksonomi (IUCN Red List 2024-2025)
 new Chart(document.getElementById("regionalChart").getContext("2d"), {
   type: "bar",
   data: {
     labels: [
-      "Asia Tenggara",
-      "Afrika Sub-Sahara",
-      "Amazon",
-      "India",
-      "Am. Tengah",
-      "Mediterania",
-      "Am. Utara",
-      "Australasia",
+      "Amfibi",
+      "Hiu & Pari",
+      "Karang",
+      "Konifer",
+      "Mamalia",
+      "Reptil",
+      "Ikan Tawar",
+      "Burung",
     ],
     datasets: [
       {
-        label: "Kritis",
-        data: [312, 289, 245, 198, 167, 134, 98, 87],
-        backgroundColor: "rgba(192,57,43,0.65)",
-        borderRadius: 2,
-      },
-      {
-        label: "Terancam",
-        data: [198, 234, 189, 156, 134, 112, 145, 98],
-        backgroundColor: "rgba(212,135,10,0.65)",
-        borderRadius: 2,
-      },
-      {
-        label: "Rentan",
-        data: [245, 178, 212, 134, 98, 167, 189, 145],
-        backgroundColor: "rgba(201,168,76,0.45)",
+        label: "% Terancam dari total yang dievaluasi",
+        data: [41, 37, 36, 34, 26, 21, 25, 12],
+        backgroundColor: [
+          "rgba(192,57,43,0.7)",
+          "rgba(192,57,43,0.65)",
+          "rgba(212,135,10,0.7)",
+          "rgba(212,135,10,0.65)",
+          "rgba(201,168,76,0.7)",
+          "rgba(201,168,76,0.65)",
+          "rgba(74,143,168,0.65)",
+          "rgba(61,139,61,0.65)",
+        ],
         borderRadius: 2,
       },
     ],
@@ -382,10 +369,14 @@ new Chart(document.getElementById("regionalChart").getContext("2d"), {
           boxWidth: 10,
         },
       },
+      tooltip: {
+        callbacks: {
+          label: (ctx) => ` ${ctx.raw}% spesies terancam`,
+        },
+      },
     },
     scales: {
       x: {
-        stacked: true,
         grid: { color: "rgba(245,242,236,0.03)" },
         ticks: {
           color: "rgba(245,242,236,0.35)",
@@ -393,49 +384,48 @@ new Chart(document.getElementById("regionalChart").getContext("2d"), {
         },
       },
       y: {
-        stacked: true,
+        max: 50,
         grid: { color: "rgba(245,242,236,0.03)" },
         ticks: {
           color: "rgba(245,242,236,0.35)",
           font: { ...chartFont, size: 10 },
+          callback: (val) => val + "%",
         },
       },
     },
   },
 });
 
-// Recovery radar
+// Penurunan per Wilayah — Sumber: WWF Living Planet Report 2024
 new Chart(document.getElementById("recoveryChart").getContext("2d"), {
-  type: "radar",
+  type: "bar",
   data: {
     labels: [
-      "Anti-Perburuan",
-      "Pemulihan Habitat",
-      "Penangkaran",
-      "Edukasi Masy.",
-      "Advokasi",
-      "Riset",
+      "Am. Latin & Karibia",
+      "Afrika",
+      "Asia-Pasifik",
+      "Am. Utara",
+      "Eropa & Asia Tengah",
     ],
     datasets: [
       {
-        label: "2020",
-        data: [45, 38, 52, 30, 41, 60],
-        borderColor: "rgba(74,143,168,0.6)",
-        backgroundColor: "rgba(74,143,168,0.08)",
-        borderWidth: 1.5,
-      },
-      {
-        label: "2024",
-        data: [68, 55, 71, 52, 63, 78],
-        borderColor: "rgba(61,139,61,0.8)",
-        backgroundColor: "rgba(61,139,61,0.12)",
-        borderWidth: 1.5,
+        label: "% Penurunan Populasi Satwa sejak 1970",
+        data: [95, 76, 60, 39, 35],
+        backgroundColor: [
+          "rgba(192,57,43,0.75)",
+          "rgba(192,57,43,0.65)",
+          "rgba(212,135,10,0.70)",
+          "rgba(201,168,76,0.65)",
+          "rgba(61,139,61,0.65)",
+        ],
+        borderRadius: 2,
       },
     ],
   },
   options: {
     responsive: true,
     maintainAspectRatio: false,
+    indexAxis: "y",
     plugins: {
       legend: {
         labels: {
@@ -444,16 +434,28 @@ new Chart(document.getElementById("recoveryChart").getContext("2d"), {
           boxWidth: 10,
         },
       },
+      tooltip: {
+        callbacks: {
+          label: (ctx) => ` Turun ${ctx.raw}% sejak 1970`,
+        },
+      },
     },
     scales: {
-      r: {
-        grid: { color: "rgba(245,242,236,0.05)" },
-        pointLabels: {
-          color: "rgba(245,242,236,0.45)",
+      x: {
+        max: 100,
+        grid: { color: "rgba(245,242,236,0.03)" },
+        ticks: {
+          color: "rgba(245,242,236,0.35)",
+          font: { ...chartFont, size: 10 },
+          callback: (val) => val + "%",
+        },
+      },
+      y: {
+        grid: { color: "rgba(245,242,236,0.03)" },
+        ticks: {
+          color: "rgba(245,242,236,0.35)",
           font: { ...chartFont, size: 9 },
         },
-        ticks: { display: false },
-        angleLines: { color: "rgba(245,242,236,0.05)" },
       },
     },
   },
