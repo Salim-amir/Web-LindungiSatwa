@@ -4,24 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232d6e2d'/><stop offset='100%25' stop-color='%234a8fa8'/></linearGradient></defs><text y='78' x='50' text-anchor='middle' font-size='65'>🌿</text></svg>">
-    <title>LindungiSatwaIndonesia </title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>LindungiSatwa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- KURSOR KUSTOM -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
-    <!-- ====== NAVIGASI ====== -->
     <nav id="navbar">
       <a href="#hero" class="nav-logo">
         <div class="nav-logo-icon">🌿</div>
@@ -38,25 +30,23 @@
       </ul>
     </nav>
 
-    <!-- ====== HERO ====== -->
     <section id="hero">
       <div class="hero-parallax-bg" id="heroBg"></div>
       <div class="hero-overlay-lines"></div>
       <div class="hero-content">
         <div class="hero-badge">
           <span class="dot"></span>
-          Inisiatif Perlindungan Satwa Liar Indonesia
+          Inisiatif Perlindungan Satwa Liar Global
         </div>
         <h1 class="hero-title">
           <span class="line1">Peduli Lindungi</span>
           <span class="line2">Hewan</span>
           <p class="hero-subtitle">
-            Bersama kita dapat menyelamatkan spesies langka di Indonesia. Setiap
+            Bersama kita dapat menyelamatkan spesies langka di Bumi. Setiap
             tindakan yang Anda lakukan melindungi keanekaragaman hayati yang
             menopang kehidupan di planet kita.
           </p>
         </h1>
-
         <div class="hero-actions">
           <a href="#incident-reporting" class="btn-primary">
             <i class="fas fa-exclamation-triangle"></i>
@@ -69,23 +59,25 @@
         </div>
       </div>
       <div class="hero-stats">
-       <div class="hero-stat-num" data-count="1289">0</div>
-       <div class="hero-stat-label">Spesies Terancam di Indonesia</div>
-       
-       <div class="hero-stat-num" data-count="183">0</div>
-       <div class="hero-stat-label">Spesies Kritis</div>
-       
-       <div class="hero-stat-num" data-count="552" data-suffix="+">0</div>
-       <div class="hero-stat-label">Kawasan Konservasi</div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="47187">0</div>
+          <div class="hero-stat-label">Spesies Terancam</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="16306">0</div>
+          <div class="hero-stat-label">Hampir Punah</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="260000" data-suffix="+">0</div>
+          <div class="hero-stat-label">Kawasan Lindung</div>
+        </div>
       </div>
-
       <div class="hero-scroll">
         <div class="hero-scroll-line"></div>
       </div>
       <div class="hero-foreground" id="heroFg"></div>
     </section>
 
-    <!-- ====== KEDALAMAN HUTAN PARALLAX ====== -->
     <section id="forest-depth">
       <div class="forest-layer forest-bg"></div>
       <div class="forest-layer forest-mountains" id="fMountains"></div>
@@ -93,15 +85,9 @@
       <div class="forest-layer forest-trees-back" id="fTreesBack"></div>
       <div class="forest-layer forest-trees-front" id="fTreesFront"></div>
       <div class="forest-layer forest-fog"></div>
-      <div class="silhouette" style="left: 14%; top: 28%; font-size: 4rem">
-        🦅
-      </div>
-      <div class="silhouette" style="right: 13%; top: 38%; font-size: 5rem">
-        🐘
-      </div>
-      <div class="silhouette" style="left: 44%; bottom: 22%; font-size: 3.2rem">
-        🐅
-      </div>
+      <div class="silhouette" style="left: 14%; top: 28%; font-size: 4rem">🦅</div>
+      <div class="silhouette" style="right: 13%; top: 38%; font-size: 5rem">🐘</div>
+      <div class="silhouette" style="left: 44%; bottom: 22%; font-size: 3.2rem">🐅</div>
       <div class="forest-text">
         <h2>Setiap Hutan Adalah<br />Dunia Tersendiri</h2>
         <p>
@@ -111,18 +97,14 @@
       </div>
     </section>
 
-    <!-- ====== IKHTISAR STATISTIK ====== -->
     <section id="stats-overview">
       <div class="section-header">
         <div class="section-label">Krisis yang Terjadi</div>
-        <h2 class="section-title">
-          Satwa Liar dalam <span>Bahaya Kritis</span>
-        </h2>
+        <h2 class="section-title">Satwa Liar dalam <span>Bahaya Kritis</span></h2>
         <div class="section-rule"></div>
         <p class="section-desc">
           Planet ini sedang mengalami kepunahan massal keenam. Aktivitas manusia
-          mendorong spesies menuju kepunahan 1.000 kali lebih cepat dari laju
-          alami.
+          mendorong spesies menuju kepunahan 1.000 kali lebih cepat dari laju alami.
         </p>
       </div>
       <div class="stats-grid">
@@ -140,11 +122,9 @@
         </div>
         <div class="stat-card">
           <span class="stat-card-icon">🌿</span>
-          <div class="stat-card-num" data-count="73%">0</div>
+          <div class="stat-card-num" data-count="73">0</div>
           <div class="stat-card-label">% Penurunan Satwa (50 Thn)</div>
-          <div class="stat-card-trend trend-down">
-            Rata-rata penurunan populasi
-          </div>
+          <div class="stat-card-trend trend-down">Rata-rata penurunan populasi</div>
         </div>
         <div class="stat-card">
           <span class="stat-card-icon">✅</span>
@@ -155,34 +135,29 @@
       </div>
     </section>
 
-    <!-- ====== PETA SATWA LIAR ====== -->
+    <!-- ====== PETA SATWA LIAR INDONESIA ====== -->
     <section id="wildlife-map">
       <div class="section-header">
         <div class="section-label">Peta Intelejen</div>
-        <h2 class="section-title">Monitor <span>Habitat Satwa Liar</span></h2>
+        <h2 class="section-title">Monitor <span>Habitat Satwa Liar Indonesia</span></h2>
         <div class="section-rule"></div>
         <p class="section-desc">
-          Pantau habitat spesies terancam, zona risiko perburuan liar, dan
-          laporan kejadian secara real-time dari seluruh penjuru dunia.
+          Pantau habitat spesies endemik Indonesia yang terancam, zona risiko perburuan liar,
+          dan kawasan konservasi nasional dari Sabang sampai Merauke.
         </p>
       </div>
       <div class="map-container">
         <div class="map-sidebar">
           <div class="map-filter-card">
             <h4>Filter Lapisan</h4>
-            <button
-              class="filter-btn active"
-              onclick="toggleLayer(this, 'habitats')"
-            >
+            <button class="filter-btn active" onclick="toggleLayer(this, 'habitats')">
               <span class="dot" style="background: #3d8b3d"></span> Habitat
             </button>
             <button class="filter-btn" onclick="toggleLayer(this, 'poaching')">
-              <span class="dot" style="background: #c0392b"></span> Zona
-              Perburuan
+              <span class="dot" style="background: #c0392b"></span> Zona Perburuan
             </button>
             <button class="filter-btn" onclick="toggleLayer(this, 'protected')">
-              <span class="dot" style="background: #4a8fa8"></span> Kawasan
-              Lindung
+              <span class="dot" style="background: #4a8fa8"></span> Kawasan Lindung
             </button>
             <button class="filter-btn" onclick="toggleLayer(this, 'incidents')">
               <span class="dot" style="background: #d4870a"></span> Kejadian
@@ -191,61 +166,356 @@
           <div class="map-filter-card">
             <h4>Legenda</h4>
             <div class="legend-item">
-              <div class="legend-dot" style="background: #c0392b"></div>
-              Risiko Kritis
+              <div class="legend-dot" style="background: #c0392b"></div>Risiko Kritis
             </div>
             <div class="legend-item">
-              <div class="legend-dot" style="background: #d4870a"></div>
-              Risiko Tinggi
+              <div class="legend-dot" style="background: #d4870a"></div>Risiko Tinggi
             </div>
             <div class="legend-item">
-              <div class="legend-dot" style="background: #c9a84c"></div>
-              Risiko Sedang
+              <div class="legend-dot" style="background: #c9a84c"></div>Risiko Sedang
             </div>
             <div class="legend-item">
-              <div class="legend-dot" style="background: #3d8b3d"></div>
-              Zona Stabil
+              <div class="legend-dot" style="background: #3d8b3d"></div>Zona Stabil
             </div>
             <div class="legend-item">
-              <div class="legend-dot" style="background: #4a8fa8"></div>
-              Terlindungi
+              <div class="legend-dot" style="background: #4a8fa8"></div>Terlindungi
             </div>
           </div>
           <div class="map-filter-card" id="mapInfoCard">
             <h4>Info Wilayah</h4>
-            <p style="color: rgba(245, 242, 236, 0.35); font-size: 0.76rem">
-              Klik pada wilayah untuk melihat detail
-            </p>
+            <p style="color: rgba(245,242,236,.35); font-size: .76rem">Klik pada wilayah untuk melihat detail</p>
           </div>
         </div>
+
         <div class="map-main">
-          <svg viewBox="0 0 800 450">
-          <rect width="800" height="450" fill="#0a1e0a" />
+          <!-- PETA INDONESIA SVG -->
+          <svg id="wildlife-map-svg" viewBox="0 0 900 400" style="width:100%;height:500px;display:block;cursor:crosshair;">
+            <!-- Background laut -->
+            <defs>
+              <radialGradient id="seaGrad" cx="50%" cy="50%" r="70%">
+                <stop offset="0%" stop-color="#0a1e2e"/>
+                <stop offset="100%" stop-color="#050f18"/>
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
 
-          <!-- Sumatra -->
-          <ellipse cx="200" cy="250" rx="80" ry="120"
-            class="map-region"
-            data-name="Sumatra"
-            data-risk="Kritis" />
+            <rect width="900" height="400" fill="url(#seaGrad)"/>
 
-          <!-- Kalimantan -->
-          <ellipse cx="400" cy="220" rx="90" ry="100"
-            class="map-region"
-            data-name="Kalimantan"
-            data-risk="Kritis" />
+            <!-- Grid lines laut -->
+            <line x1="0" y1="200" x2="900" y2="200" stroke="rgba(74,143,168,0.05)" stroke-width="1"/>
+            <line x1="450" y1="0" x2="450" y2="400" stroke="rgba(74,143,168,0.05)" stroke-width="1"/>
 
-          <!-- Jawa -->
-          <ellipse cx="350" cy="350" rx="120" ry="40"
-            class="map-region"
-            data-name="Jawa"
-            data-risk="Tinggi" />
+            <!-- Label Laut -->
+            <text x="80" y="80" text-anchor="middle" fill="rgba(74,143,168,0.18)" font-size="9" font-family="Outfit" letter-spacing="2">LAUT ANDAMAN</text>
+            <text x="450" y="30" text-anchor="middle" fill="rgba(74,143,168,0.18)" font-size="9" font-family="Outfit" letter-spacing="2">LAUT CINA SELATAN</text>
+            <text x="820" y="130" text-anchor="middle" fill="rgba(74,143,168,0.18)" font-size="9" font-family="Outfit" letter-spacing="2">SAMUDRA PASIFIK</text>
+            <text x="80" y="360" text-anchor="middle" fill="rgba(74,143,168,0.18)" font-size="9" font-family="Outfit" letter-spacing="2">SAMUDRA HINDIA</text>
+            <text x="450" y="380" text-anchor="middle" fill="rgba(74,143,168,0.18)" font-size="9" font-family="Outfit" letter-spacing="2">LAUT JAWA</text>
+            <text x="750" y="350" text-anchor="middle" fill="rgba(74,143,168,0.18)" font-size="9" font-family="Outfit" letter-spacing="2">LAUT ARAFURA</text>
 
-          <!-- Papua -->
-          <ellipse cx="650" cy="250" rx="120" ry="100"
-            class="map-region"
-            data-name="Papua"
-            data-risk="Sedang" />
-        </svg>
+            <!-- ===== SUMATERA ===== -->
+            <!-- Warna merah = kritis (harimau, badak, orangutan) -->
+            <path id="r-sumatra" class="map-region"
+              d="M60,70 L85,55 L115,50 L140,55 L165,65 L190,80 L210,100 L225,125 L230,155 L225,185 L215,210 L200,230 L185,250 L170,265 L155,275 L138,280 L120,275 L105,260 L90,240 L75,215 L65,185 L55,155 L50,125 L52,100 L60,70Z"
+              fill="#2a1515"
+              stroke="rgba(192,57,43,0.4)"
+              stroke-width="1.2"
+              cursor="pointer"
+              data-name="Sumatera"
+              data-pop="Harimau Sumatera, Badak Sumatera, Orangutan Sumatera, Gajah Sumatera"
+              data-risk="Kritis — Deforestasi masif untuk kelapa sawit"
+              data-status="critical"
+            />
+            <path d="M60,70 L85,55 L115,50 L140,55 L165,65 L190,80 L210,100 L225,125 L230,155 L225,185 L215,210 L200,230 L185,250 L170,265 L155,275 L138,280 L120,275 L105,260 L90,240 L75,215 L65,185 L55,155 L50,125 L52,100 L60,70Z"
+              fill="rgba(192,57,43,0.2)" pointer-events="none"/>
+            <text x="140" y="170" text-anchor="middle" fill="rgba(245,242,236,0.35)" font-size="9" font-family="Outfit" pointer-events="none" font-weight="500">SUMATERA</text>
+
+            <!-- ===== JAWA ===== -->
+            <!-- Warna kuning = tinggi (badak jawa, macan tutul) -->
+            <path id="r-java" class="map-region"
+              d="M205,285 L230,278 L265,272 L300,270 L335,268 L370,265 L400,263 L430,262 L460,264 L488,268 L510,275 L520,285 L515,298 L500,308 L475,315 L445,318 L415,315 L385,312 L355,310 L325,308 L295,305 L265,300 L240,295 L218,290Z"
+              fill="#2a1e0a"
+              stroke="rgba(212,135,10,0.45)"
+              stroke-width="1.2"
+              cursor="pointer"
+              data-name="Jawa & Bali"
+              data-pop="Badak Jawa, Macan Tutul Jawa, Elang Jawa, Lutung Jawa"
+              data-risk="Kritis — Pulau terpadat, habitat sangat terfragmentasi"
+              data-status="critical"
+            />
+            <path d="M205,285 L230,278 L265,272 L300,270 L335,268 L370,265 L400,263 L430,262 L460,264 L488,268 L510,275 L520,285 L515,298 L500,308 L475,315 L445,318 L415,315 L385,312 L355,310 L325,308 L295,305 L265,300 L240,295 L218,290Z"
+              fill="rgba(212,135,10,0.18)" pointer-events="none"/>
+            <text x="360" y="292" text-anchor="middle" fill="rgba(245,242,236,0.35)" font-size="9" font-family="Outfit" pointer-events="none" font-weight="500">JAWA</text>
+
+            <!-- ===== KALIMANTAN ===== -->
+            <!-- Merah kritis (orangutan, bekantan, enggang) -->
+            <path id="r-kalimantan" class="map-region"
+              d="M310,70 L345,58 L385,52 L425,50 L465,52 L500,60 L530,75 L555,95 L570,120 L575,150 L572,180 L562,210 L545,235 L522,255 L495,268 L465,275 L435,278 L405,275 L375,268 L350,255 L330,238 L315,218 L305,195 L298,168 L296,140 L300,112 L308,88Z"
+              fill="#1a2a10"
+              stroke="rgba(192,57,43,0.38)"
+              stroke-width="1.2"
+              cursor="pointer"
+              data-name="Kalimantan"
+              data-pop="Orangutan Kalimantan, Bekantan, Beruang Madu, Macan Dahan"
+              data-risk="Kritis — Alih fungsi hutan dan kebakaran lahan gambut"
+              data-status="critical"
+            />
+            <path d="M310,70 L345,58 L385,52 L425,50 L465,52 L500,60 L530,75 L555,95 L570,120 L575,150 L572,180 L562,210 L545,235 L522,255 L495,268 L465,275 L435,278 L405,275 L375,268 L350,255 L330,238 L315,218 L305,195 L298,168 L296,140 L300,112 L308,88Z"
+              fill="rgba(192,57,43,0.15)" pointer-events="none"/>
+            <text x="435" y="168" text-anchor="middle" fill="rgba(245,242,236,0.35)" font-size="9" font-family="Outfit" pointer-events="none" font-weight="500">KALIMANTAN</text>
+
+            <!-- ===== SULAWESI ===== -->
+            <!-- Amber = tinggi (anoa, babirusa, maleo) -->
+            <path id="r-sulawesi" class="map-region"
+              d="M590,80 L610,70 L628,72 L642,85 L650,105 L648,128 L638,150 L622,168 L608,185 L600,205 L598,228 L605,248 L618,262 L628,272 L625,285 L612,290 L598,282 L585,265 L575,245 L570,222 L572,198 L580,175 L585,152 L582,128 L575,108 L580,90Z"
+              fill="#1e1a08"
+              stroke="rgba(212,135,10,0.4)"
+              stroke-width="1.2"
+              cursor="pointer"
+              data-name="Sulawesi"
+              data-pop="Anoa, Babirusa, Burung Maleo, Tarsius, Kus-kus Sulawesi"
+              data-risk="Tinggi — Spesies endemik tinggi, tekanan pertambangan"
+              data-status="endangered"
+            />
+            <path d="M590,80 L610,70 L628,72 L642,85 L650,105 L648,128 L638,150 L622,168 L608,185 L600,205 L598,228 L605,248 L618,262 L628,272 L625,285 L612,290 L598,282 L585,265 L575,245 L570,222 L572,198 L580,175 L585,152 L582,128 L575,108 L580,90Z"
+              fill="rgba(212,135,10,0.15)" pointer-events="none"/>
+            <!-- Lengan Sulawesi (karakter bentuk K unik) -->
+            <path class="map-region"
+              d="M638,150 L658,138 L680,130 L698,128 L708,135 L705,148 L688,158 L668,162 L648,160Z"
+              fill="#1e1a08" stroke="rgba(212,135,10,0.3)" stroke-width="1"
+              cursor="pointer"
+              data-name="Sulawesi — Lengan Utara"
+              data-pop="Anoa, Tarsius Spektrum, Kelelawar Sulawesi"
+              data-risk="Tinggi — Deforestasi pesisir"
+              data-status="endangered"
+            />
+            <path class="map-region"
+              d="M622,168 L645,162 L665,158 L678,165 L680,180 L668,195 L648,200 L630,195 L620,182Z"
+              fill="#1e1a08" stroke="rgba(212,135,10,0.3)" stroke-width="1"
+              cursor="pointer"
+              data-name="Sulawesi — Lengan Tengah"
+              data-pop="Babirusa, Maleo, Monyet Hitam"
+              data-risk="Tinggi"
+              data-status="endangered"
+            />
+            <text x="600" y="175" text-anchor="middle" fill="rgba(245,242,236,0.32)" font-size="8" font-family="Outfit" pointer-events="none" font-weight="500">SULAWESI</text>
+
+            <!-- ===== MALUKU ===== -->
+            <!-- Biru = terlindungi (burung cendrawasih, kakatua) -->
+            <path id="r-maluku" class="map-region"
+              d="M700,130 L718,122 L732,128 L738,142 L732,158 L718,165 L703,158 L697,143Z"
+              fill="#0a1e2a"
+              stroke="rgba(74,143,168,0.45)"
+              stroke-width="1.2"
+              cursor="pointer"
+              data-name="Maluku"
+              data-pop="Kakatua Putih, Nuri Maluku, Burung Bidadari"
+              data-risk="Sedang — Perdagangan satwa liar dan kerusakan terumbu"
+              data-status="vulnerable"
+            />
+            <path d="M700,130 L718,122 L732,128 L738,142 L732,158 L718,165 L703,158 L697,143Z"
+              fill="rgba(74,143,168,0.18)" pointer-events="none"/>
+
+            <!-- Pulau-pulau Maluku tambahan -->
+            <ellipse class="map-region" cx="750" cy="148" rx="18" ry="12"
+              fill="#0a1e2a" stroke="rgba(74,143,168,0.38)" stroke-width="1"
+              cursor="pointer"
+              data-name="Maluku Utara"
+              data-pop="Kakatua Maluku, Bidadari, Burung Hantu Halmahera"
+              data-risk="Sedang"
+              data-status="vulnerable"
+            />
+            <path d="M750,148 L768,140 L782,145 L780,158 L765,163 L752,160Z"
+              fill="#0a1e2a" stroke="rgba(74,143,168,0.3)" stroke-width="1"
+              cursor="pointer" class="map-region"
+              data-name="Kepulauan Sula"
+              data-pop="Kelelawar, Kus-kus, Nuri Endemik"
+              data-risk="Sedang"
+              data-status="vulnerable"
+            />
+            <text x="735" y="145" text-anchor="middle" fill="rgba(245,242,236,0.28)" font-size="7" font-family="Outfit" pointer-events="none">MALUKU</text>
+
+            <!-- ===== PAPUA ===== -->
+            <!-- Hijau = stabil relatif (keanekaragaman tertinggi) -->
+            <path id="r-papua" class="map-region"
+              d="M780,90 L820,75 L858,68 L888,72 L898,88 L895,115 L882,140 L862,162 L838,180 L812,195 L790,208 L772,220 L758,235 L748,252 L742,268 L738,282 L730,290 L718,288 L708,278 L705,260 L710,240 L720,220 L735,200 L752,180 L768,160 L778,138 L782,115 L780,90Z"
+              fill="#102010"
+              stroke="rgba(61,139,61,0.4)"
+              stroke-width="1.2"
+              cursor="pointer"
+              data-name="Papua"
+              data-pop="Cendrawasih, Kasuari, Kanguru Pohon, Kuskus, Buaya Irian"
+              data-risk="Sedang — Ekspansi perkebunan dan pertambangan"
+              data-status="vulnerable"
+            />
+            <path d="M780,90 L820,75 L858,68 L888,72 L898,88 L895,115 L882,140 L862,162 L838,180 L812,195 L790,208 L772,220 L758,235 L748,252 L742,268 L738,282 L730,290 L718,288 L708,278 L705,260 L710,240 L720,220 L735,200 L752,180 L768,160 L778,138 L782,115 L780,90Z"
+              fill="rgba(61,139,61,0.15)" pointer-events="none"/>
+            <text x="820" y="175" text-anchor="middle" fill="rgba(245,242,236,0.35)" font-size="9" font-family="Outfit" pointer-events="none" font-weight="500">PAPUA</text>
+
+            <!-- Papua Barat -->
+            <path class="map-region"
+              d="M710,165 L728,158 L745,162 L752,178 L745,195 L728,200 L712,195 L706,180Z"
+              fill="#102010" stroke="rgba(61,139,61,0.35)" stroke-width="1"
+              cursor="pointer"
+              data-name="Papua Barat"
+              data-pop="Kelelawar Papua, Kuskus Beruang, Cendrawasih Raja"
+              data-risk="Sedang — Tekanan pertambangan nikel"
+              data-status="vulnerable"
+            />
+
+            <!-- Semenanjung Kepala Burung -->
+            <path class="map-region"
+              d="M748,100 L770,88 L782,90 L780,108 L768,120 L752,118 L745,108Z"
+              fill="#102010" stroke="rgba(61,139,61,0.32)" stroke-width="1"
+              cursor="pointer"
+              data-name="Kepala Burung (Manokwari)"
+              data-pop="Cendrawasih Merah, Raja Udang, Kakatua Koki"
+              data-risk="Stabil — Hutan primer masih luas"
+              data-status="stable"
+            />
+
+            <!-- ===== NUSA TENGGARA ===== -->
+            <!-- Amber muda (komodo, rusa timor) -->
+            <!-- Lombok -->
+            <ellipse class="map-region" cx="540" cy="300" rx="15" ry="22"
+              fill="#1a1808" stroke="rgba(201,168,76,0.4)" stroke-width="1"
+              cursor="pointer"
+              data-name="Lombok"
+              data-pop="Elang Flores, Kura-kura Sulcata, Rusa Timor"
+              data-risk="Sedang"
+              data-status="vulnerable"
+            />
+            <!-- Sumbawa -->
+            <path class="map-region"
+              d="M555,285 L590,278 L618,282 L625,295 L618,310 L600,318 L572,316 L555,305Z"
+              fill="#1a1808" stroke="rgba(201,168,76,0.38)" stroke-width="1"
+              cursor="pointer"
+              data-name="Sumbawa"
+              data-pop="Macan Tutul Sunda, Rusa Timor, Kakatua Kecil"
+              data-risk="Sedang"
+              data-status="vulnerable"
+            />
+            <!-- Flores + Komodo -->
+            <path id="r-flores" class="map-region"
+              d="M628,290 L658,282 L688,278 L710,282 L720,295 L715,310 L695,318 L665,322 L640,318 L625,305Z"
+              fill="#1e1808"
+              stroke="rgba(212,135,10,0.42)"
+              stroke-width="1.2"
+              cursor="pointer"
+              data-name="Flores & Komodo"
+              data-pop="Komodo (Varanus komodoensis), Elang Flores, Gagak Flores"
+              data-risk="Tinggi — Pariwisata tidak terkendali, kekeringan iklim"
+              data-status="endangered"
+            />
+            <path d="M628,290 L658,282 L688,278 L710,282 L720,295 L715,310 L695,318 L665,322 L640,318 L625,305Z"
+              fill="rgba(212,135,10,0.2)" pointer-events="none"/>
+            <text x="672" y="302" text-anchor="middle" fill="rgba(245,242,236,0.28)" font-size="7" font-family="Outfit" pointer-events="none">FLORES</text>
+
+            <!-- Timor -->
+            <path class="map-region"
+              d="M715,305 L745,298 L770,295 L785,305 L780,320 L760,328 L738,325 L720,315Z"
+              fill="#1a1808" stroke="rgba(201,168,76,0.35)" stroke-width="1"
+              cursor="pointer"
+              data-name="Timor"
+              data-pop="Rusa Timor, Biawak Timor, Kuskus Timor"
+              data-risk="Sedang"
+              data-status="vulnerable"
+            />
+            <text x="652" y="345" text-anchor="middle" fill="rgba(245,242,236,0.25)" font-size="8" font-family="Outfit" pointer-events="none">NUSA TENGGARA</text>
+
+            <!-- ===== PULAU-PULAU KECIL ===== -->
+            <!-- Sabang / Aceh -->
+            <ellipse cx="50" cy="58" rx="10" ry="6" fill="#2a1515" stroke="rgba(192,57,43,0.3)" stroke-width="0.8"/>
+            <!-- Nias -->
+            <ellipse cx="75" cy="185" rx="8" ry="14" fill="#2a1515" stroke="rgba(192,57,43,0.25)" stroke-width="0.8"/>
+            <!-- Bangka Belitung -->
+            <ellipse cx="220" cy="235" rx="14" ry="10" fill="#1a2a10" stroke="rgba(61,139,61,0.3)" stroke-width="0.8"/>
+            <!-- Bali -->
+            <ellipse class="map-region" cx="525" cy="295" rx="10" ry="7"
+              fill="#1a1e08" stroke="rgba(201,168,76,0.38)" stroke-width="1"
+              cursor="pointer"
+              data-name="Bali"
+              data-pop="Jalak Bali (Leucopsar rothschildi), Penyu Hijau"
+              data-risk="Kritis — Populasi Jalak Bali tersisa &lt;100 di alam liar"
+              data-status="critical"
+            />
+            <!-- Sulawesi selatan kecil -->
+            <ellipse cx="622" cy="295" rx="8" ry="5" fill="#1e1a08" stroke="rgba(212,135,10,0.25)" stroke-width="0.8"/>
+
+            <!-- ===== INCIDENT MARKERS ===== -->
+            <!-- Sumatera - Harimau -->
+            <circle cx="130" cy="155" r="6" fill="#c0392b" opacity=".85">
+              <animate attributeName="r" values="6;12;6" dur="2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".85;.15;.85" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Kalimantan - Orangutan -->
+            <circle cx="420" cy="150" r="6" fill="#c0392b" opacity=".85">
+              <animate attributeName="r" values="6;12;6" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".85;.15;.85" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Jawa - Badak Jawa -->
+            <circle cx="245" cy="285" r="5" fill="#c0392b" opacity=".8">
+              <animate attributeName="r" values="5;11;5" dur="1.9s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".8;.15;.8" dur="1.9s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Sulawesi - Anoa/Babirusa -->
+            <circle cx="610" cy="155" r="5" fill="#d4870a" opacity=".8">
+              <animate attributeName="r" values="5;10;5" dur="2.6s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Flores - Komodo -->
+            <circle cx="668" cy="298" r="5" fill="#d4870a" opacity=".75">
+              <animate attributeName="r" values="5;10;5" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Papua - Cendrawasih -->
+            <circle cx="840" cy="130" r="4" fill="#3d8b3d" opacity=".8">
+              <animate attributeName="r" values="4;8;4" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Maluku - Kakatua -->
+            <circle cx="720" cy="142" r="4" fill="#4a8fa8" opacity=".8">
+              <animate attributeName="r" values="4;8;4" dur="2.8s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Bali - Jalak -->
+            <circle cx="525" cy="293" r="4" fill="#c0392b" opacity=".9">
+              <animate attributeName="r" values="4;9;4" dur="1.7s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".9;.15;.9" dur="1.7s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- ===== KAWASAN KONSERVASI NASIONAL (bintang kecil) ===== -->
+            <!-- TN Gunung Leuser -->
+            <polygon points="118,85 121,93 130,93 123,98 125,106 118,101 111,106 113,98 106,93 115,93"
+              fill="rgba(61,139,61,0.6)" stroke="rgba(61,139,61,0.8)" stroke-width="0.5" pointer-events="none"/>
+            <!-- TN Ujung Kulon -->
+            <polygon points="215,290 218,298 226,298 220,303 222,311 215,306 208,311 210,303 204,298 212,298"
+              fill="rgba(61,139,61,0.6)" stroke="rgba(61,139,61,0.8)" stroke-width="0.5" pointer-events="none"/>
+            <!-- TN Tanjung Puting -->
+            <polygon points="358,235 361,243 369,243 363,248 365,256 358,251 351,256 353,248 347,243 355,243"
+              fill="rgba(61,139,61,0.6)" stroke="rgba(61,139,61,0.8)" stroke-width="0.5" pointer-events="none"/>
+            <!-- TN Komodo -->
+            <polygon points="638,294 641,302 649,302 643,307 645,315 638,310 631,315 633,307 627,302 635,302"
+              fill="rgba(61,139,61,0.6)" stroke="rgba(61,139,61,0.8)" stroke-width="0.5" pointer-events="none"/>
+            <!-- TN Lorentz Papua -->
+            <polygon points="830,148 833,156 841,156 835,161 837,169 830,164 823,169 825,161 819,156 827,156"
+              fill="rgba(61,139,61,0.6)" stroke="rgba(61,139,61,0.8)" stroke-width="0.5" pointer-events="none"/>
+
+            <!-- Garis ekuator -->
+            <line x1="0" y1="218" x2="900" y2="218" stroke="rgba(74,143,168,0.08)" stroke-width="1" stroke-dasharray="6,6"/>
+            <text x="8" y="215" fill="rgba(74,143,168,0.2)" font-size="7" font-family="JetBrains Mono">0°</text>
+
+            <!-- Label koordinat -->
+            <text x="8" y="395" fill="rgba(245,242,236,0.12)" font-size="7" font-family="JetBrains Mono">94°E</text>
+            <text x="870" y="395" fill="rgba(245,242,236,0.12)" font-size="7" font-family="JetBrains Mono">142°E</text>
+
+            <!-- Judul peta -->
+            <text x="450" y="18" text-anchor="middle" fill="rgba(245,242,236,0.15)" font-size="10" font-family="Outfit" letter-spacing="4" font-weight="500">PETA KONSERVASI SATWA LIAR INDONESIA</text>
+
+            <!-- ★ = Taman Nasional legend -->
+            <polygon points="850,22 852,28 858,28 853,32 855,38 850,34 845,38 847,32 842,28 848,28"
+              fill="rgba(61,139,61,0.6)" stroke="rgba(61,139,61,0.8)" stroke-width="0.5" pointer-events="none"/>
+            <text x="862" y="32" fill="rgba(245,242,236,0.2)" font-size="7" font-family="Outfit">Taman Nasional</text>
+          </svg>
 
           <div class="map-popup" id="mapPopup">
             <h4 id="popupName">Nama Wilayah</h4>
@@ -253,16 +523,12 @@
             <p id="popupRisk"></p>
             <span class="status-badge" id="popupStatus"></span>
           </div>
+
           <div class="timeline-control">
             <span class="timeline-label">Sumber Data</span>
-            <span
-              style="
-                color: rgba(255, 255, 255, 0.4);
-                font-size: 0.78rem;
-                flex: 1;
-              "
-              >IUCN Red List · WWF Living Planet Report</span
-            >
+            <span style="color:rgba(255,255,255,.4);font-size:.78rem;flex:1">
+              IUCN Red List · KLHK RI · WWF Indonesia · LIPI · Kementerian LHK 2024
+            </span>
             <span class="timeline-year">2025</span>
           </div>
         </div>
@@ -283,10 +549,8 @@
       <div class="dashboard-grid">
         <div class="chart-card wide">
           <h4>Tren Populasi</h4>
-          <h3>Indeks Populasi Satwa Liar Indonesia (1970–2024)</h3>
-          <div class="chart-wrapper">
-            <canvas id="populationChart"></canvas>
-          </div>
+          <h3>Indeks Populasi Satwa Liar Global (1970–2024)</h3>
+          <div class="chart-wrapper"><canvas id="populationChart"></canvas></div>
         </div>
         <div class="chart-card">
           <h4>Penyebab Kepunahan</h4>
@@ -308,187 +572,94 @@
 
     <!-- ====== SOROTAN SATWA ====== -->
     <section id="animal-spotlight">
-      <div class="section-header" style="position: relative; z-index: 1">
+      <div class="section-header" style="position:relative;z-index:1">
         <div class="section-label">Spesies Terancam Punah</div>
-        <h2 class="section-title">
-          Kenali Satwa yang <span>Kami Perjuangkan</span>
-        </h2>
+        <h2 class="section-title">Kenali Satwa yang <span>Kami Perjuangkan</span></h2>
         <div class="section-rule"></div>
-        <p class="section-desc">
-          Setiap spesies tidak dapat tergantikan. Pelajari tentang hewan-hewan
-          yang berada di ambang kepunahan.
-        </p>
+        <p class="section-desc">Setiap spesies tidak dapat tergantikan. Pelajari tentang hewan-hewan yang berada di ambang kepunahan.</p>
       </div>
       <div class="spotlight-grid">
         <div class="animal-card">
           <div class="animal-img">🐅</div>
           <div class="animal-info">
-            <span class="animal-status status-critical"
-              >Kritis Terancam Punah</span
-            >
+            <span class="animal-status status-critical">Kritis Terancam Punah</span>
             <div class="animal-name">Macan Tutul Amur</div>
             <div class="animal-scientific">Panthera pardus orientalis</div>
-            <p class="animal-desc">
-              Kucing liar paling langka di dunia. Perburuan liar dan hilangnya
-              habitat telah membawa spesies menakjubkan ini ke ambang kepunahan
-              di Timur Jauh Rusia.
-            </p>
+            <p class="animal-desc">Kucing liar paling langka di dunia. Perburuan liar dan hilangnya habitat telah membawa spesies menakjubkan ini ke ambang kepunahan di Timur Jauh Rusia.</p>
             <div class="animal-meta">
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">~100</div>
-                <div class="animal-meta-key">Pop. Liar</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">Rusia</div>
-                <div class="animal-meta-key">Habitat</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">▼ 84%</div>
-                <div class="animal-meta-key">Est. Penurunan</div>
-              </div>
+              <div class="animal-meta-item"><div class="animal-meta-val">~100</div><div class="animal-meta-key">Pop. Liar</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">Rusia</div><div class="animal-meta-key">Habitat</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">▼ 84%</div><div class="animal-meta-key">Est. Penurunan</div></div>
             </div>
           </div>
         </div>
-
         <div class="animal-card">
           <div class="animal-img">🦏</div>
           <div class="animal-info">
-            <span class="animal-status status-critical"
-              >Kritis Terancam Punah</span
-            >
+            <span class="animal-status status-critical">Kritis Terancam Punah</span>
             <div class="animal-name">Badak Sumatera</div>
             <div class="animal-scientific">Dicerorhinus sumatrensis</div>
-            <p class="animal-desc">
-              Badak terkecil dan paling purba. Kurang dari 80 ekor bertahan di
-              habitat hutan yang terfragmentasi di Indonesia.
-            </p>
+            <p class="animal-desc">Badak terkecil dan paling purba. Kurang dari 80 ekor bertahan di habitat hutan yang terfragmentasi di Indonesia.</p>
             <div class="animal-meta">
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">&lt;80</div>
-                <div class="animal-meta-key">Pop. Liar</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">Sumatra</div>
-                <div class="animal-meta-key">Habitat</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">▼ 70%</div>
-                <div class="animal-meta-key">Est. Penurunan</div>
-              </div>
+              <div class="animal-meta-item"><div class="animal-meta-val">&lt;80</div><div class="animal-meta-key">Pop. Liar</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">Sumatra</div><div class="animal-meta-key">Habitat</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">▼ 70%</div><div class="animal-meta-key">Est. Penurunan</div></div>
             </div>
           </div>
         </div>
-
         <div class="animal-card">
           <div class="animal-img">🦧</div>
           <div class="animal-info">
-            <span class="animal-status status-critical"
-              >Kritis Terancam Punah</span
-            >
+            <span class="animal-status status-critical">Kritis Terancam Punah</span>
             <div class="animal-name">Orangutan Sumatera</div>
             <div class="animal-scientific">Pongo abelii</div>
-            <p class="animal-desc">
-              Deforestasi untuk kelapa sawit telah menghancurkan populasinya.
-              Kera besar yang sangat cerdas ini kini berjuang di kantong-kantong
-              hutan terisolasi.
-            </p>
+            <p class="animal-desc">Deforestasi untuk kelapa sawit telah menghancurkan populasinya. Kera besar yang sangat cerdas ini kini berjuang di kantong-kantong hutan terisolasi.</p>
             <div class="animal-meta">
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">13.846</div>
-                <div class="animal-meta-key">Pop. Liar</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">Sumatra</div>
-                <div class="animal-meta-key">Habitat</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">▼ 80%</div>
-                <div class="animal-meta-key">Est. Penurunan</div>
-              </div>
+              <div class="animal-meta-item"><div class="animal-meta-val">13.846</div><div class="animal-meta-key">Pop. Liar</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">Sumatra</div><div class="animal-meta-key">Habitat</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">▼ 80%</div><div class="animal-meta-key">Est. Penurunan</div></div>
             </div>
           </div>
         </div>
-
         <div class="animal-card">
           <div class="animal-img">🐋</div>
           <div class="animal-info">
             <span class="animal-status status-endangered">Terancam Punah</span>
             <div class="animal-name">Paus Biru</div>
             <div class="animal-scientific">Balaenoptera musculus</div>
-            <p class="animal-desc">
-              Hewan terbesar yang pernah hidup di Bumi. Perburuan paus komersial
-              hampir memusnahkan mereka; kini kebisingan kapal dan perubahan
-              iklim mengancam pemulihan.
-            </p>
+            <p class="animal-desc">Hewan terbesar yang pernah hidup di Bumi. Perburuan paus komersial hampir memusnahkan mereka; kini kebisingan kapal dan perubahan iklim mengancam pemulihan.</p>
             <div class="animal-meta">
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">10-25 Rb</div>
-                <div class="animal-meta-key">Pop. Liar</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">Global</div>
-                <div class="animal-meta-key">Habitat</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">▼ 90%</div>
-                <div class="animal-meta-key">Est. Penurunan</div>
-              </div>
+              <div class="animal-meta-item"><div class="animal-meta-val">10-25 Rb</div><div class="animal-meta-key">Pop. Liar</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">Global</div><div class="animal-meta-key">Habitat</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">▼ 90%</div><div class="animal-meta-key">Est. Penurunan</div></div>
             </div>
           </div>
         </div>
-
         <div class="animal-card">
           <div class="animal-img">🐼</div>
           <div class="animal-info">
             <span class="animal-status status-vulnerable">Rentan</span>
             <div class="animal-name">Panda Raksasa</div>
             <div class="animal-scientific">Ailuropoda melanoleuca</div>
-            <p class="animal-desc">
-              Kisah sukses konservasi yang sedang berlangsung. Program
-              penangkaran intensif telah mengangkat status panda dari "Terancam
-              Punah" menjadi "Rentan."
-            </p>
+            <p class="animal-desc">Kisah sukses konservasi yang sedang berlangsung. Program penangkaran intensif telah mengangkat status panda dari "Terancam Punah" menjadi "Rentan."</p>
             <div class="animal-meta">
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">1.864</div>
-                <div class="animal-meta-key">Pop. Liar</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">Cina</div>
-                <div class="animal-meta-key">Habitat</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">▲ 17%</div>
-                <div class="animal-meta-key">Pemulihan</div>
-              </div>
+              <div class="animal-meta-item"><div class="animal-meta-val">1.864</div><div class="animal-meta-key">Pop. Liar</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">Cina</div><div class="animal-meta-key">Habitat</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">▲ 17%</div><div class="animal-meta-key">Pemulihan</div></div>
             </div>
           </div>
         </div>
-
         <div class="animal-card">
           <div class="animal-img">🦁</div>
           <div class="animal-info">
             <span class="animal-status status-endangered">Terancam Punah</span>
             <div class="animal-name">Singa Afrika</div>
             <div class="animal-scientific">Panthera leo</div>
-            <p class="animal-desc">
-              Predator puncak ikonik Afrika menghadapi keruntuhan populasi.
-              Fragmentasi habitat dan konflik manusia-satwa mendorong penurunan
-              yang cepat.
-            </p>
+            <p class="animal-desc">Predator puncak ikonik Afrika menghadapi keruntuhan populasi. Fragmentasi habitat dan konflik manusia-satwa mendorong penurunan yang cepat.</p>
             <div class="animal-meta">
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">20.000</div>
-                <div class="animal-meta-key">Pop. Liar</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">Afrika</div>
-                <div class="animal-meta-key">Habitat</div>
-              </div>
-              <div class="animal-meta-item">
-                <div class="animal-meta-val">▼ 43%</div>
-                <div class="animal-meta-key">Est. Penurunan</div>
-              </div>
+              <div class="animal-meta-item"><div class="animal-meta-val">20.000</div><div class="animal-meta-key">Pop. Liar</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">Afrika</div><div class="animal-meta-key">Habitat</div></div>
+              <div class="animal-meta-item"><div class="animal-meta-val">▼ 43%</div><div class="animal-meta-key">Est. Penurunan</div></div>
             </div>
           </div>
         </div>
@@ -501,23 +672,11 @@
         <div class="section-label">Sistem Pelaporan</div>
         <h2 class="section-title">Laporkan <span>Kejadian Satwa Liar</span></h2>
         <div class="section-rule"></div>
-        <p class="section-desc">
-          Laporan Anda dapat menyelamatkan jiwa. Setiap kejadian yang dilaporkan
-          membantu ranger dan konservator merespons lebih cepat.
-        </p>
+        <p class="section-desc">Laporan Anda dapat menyelamatkan jiwa. Setiap kejadian yang dilaporkan membantu ranger dan konservator merespons lebih cepat.</p>
       </div>
       <div class="incident-layout">
         <div class="report-form">
-          <h3
-            style="
-              font-family: var(--font-display);
-              font-size: 1.5rem;
-              font-weight: 300;
-              margin-bottom: 1.6rem;
-            "
-          >
-            Kirim Laporan Baru
-          </h3>
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:300;margin-bottom:1.6rem">Kirim Laporan Baru</h3>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Jenis Kejadian</label>
@@ -548,170 +707,66 @@
           </div>
           <div class="form-group">
             <label class="form-label">Lokasi</label>
-            <input
-              type="text"
-              class="form-input"
-              placeholder="Masukkan lokasi atau koordinat (mis. Kalimantan, Indonesia)"
-            />
+            <input type="text" class="form-input" placeholder="Masukkan lokasi atau koordinat (mis. Kalimantan, Indonesia)"/>
           </div>
           <div class="form-group">
             <label class="form-label">Deskripsi</label>
-            <textarea
-              class="form-textarea"
-              placeholder="Ceritakan apa yang Anda saksikan. Sertakan waktu, jumlah hewan, dan detail relevan lainnya..."
-            ></textarea>
+            <textarea class="form-textarea" placeholder="Ceritakan apa yang Anda saksikan. Sertakan waktu, jumlah hewan, dan detail relevan lainnya..."></textarea>
           </div>
           <div class="form-group">
             <label class="form-label">Bukti Foto</label>
-            <div
-              class="upload-area"
-              onclick="this.querySelector('input').click()"
-            >
-              <input
-                type="file"
-                accept="image/*"
-                style="display: none"
-                multiple
-              />
+            <div class="upload-area" onclick="this.querySelector('input').click()">
+              <input type="file" accept="image/*" style="display:none" multiple/>
               <div class="upload-icon">📷</div>
-              <div class="upload-text">
-                Klik untuk unggah foto atau seret & lepas<br /><span
-                  style="color: rgba(245, 242, 236, 0.25); font-size: 0.72rem"
-                  >PNG, JPG hingga 10MB</span
-                >
-              </div>
+              <div class="upload-text">Klik untuk unggah foto atau seret &amp; lepas<br/><span style="color:rgba(245,242,236,.25);font-size:.72rem">PNG, JPG hingga 10MB</span></div>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Nama Anda (opsional)</label>
-              <input
-                type="text"
-                class="form-input"
-                placeholder="Pelapor anonim"
-              />
+              <input type="text" class="form-input" placeholder="Pelapor anonim"/>
             </div>
             <div class="form-group">
               <label class="form-label">Kontak (opsional)</label>
-              <input
-                type="text"
-                class="form-input"
-                placeholder="Email atau telepon"
-              />
+              <input type="text" class="form-input" placeholder="Email atau telepon"/>
             </div>
           </div>
-          <button
-            class="btn-primary"
-            style="width: 100%; justify-content: center; border-radius: 3px"
-            onclick="submitReport(this)"
-          >
+          <button class="btn-primary" style="width:100%;justify-content:center;border-radius:3px" onclick="submitReport(this)">
             <i class="fas fa-paper-plane"></i> Kirim Laporan
           </button>
         </div>
         <div class="incident-tracker">
           <div class="tracker-title">Laporan Terkini</div>
-          <p class="tracker-subtitle">
-            Menampilkan 5 kejadian terbaru · Klik untuk detail
-          </p>
-
+          <p class="tracker-subtitle">Menampilkan 5 kejadian terbaru · Klik untuk detail</p>
           <div class="incident-card">
-            <div class="incident-header">
-              <span class="incident-id">#WG-2024-4821</span>
-              <span class="incident-status status-review">DITINJAU</span>
-            </div>
-            <div class="incident-title">
-              Dugaan aktivitas perburuan di dekat Ranthambore
-            </div>
-            <div class="incident-meta">
-              <span>🐅 Harimau</span><span>📍 Rajasthan, India</span
-              ><span>2 jam lalu</span>
-            </div>
-            <div class="incident-timeline">
-              <div class="timeline-step done"></div>
-              <div class="timeline-step active"></div>
-              <div class="timeline-step"></div>
-              <div class="timeline-step"></div>
-            </div>
+            <div class="incident-header"><span class="incident-id">#WG-2024-4821</span><span class="incident-status status-review">DITINJAU</span></div>
+            <div class="incident-title">Dugaan aktivitas perburuan di dekat Ranthambore</div>
+            <div class="incident-meta"><span>🐅 Harimau</span><span>📍 Rajasthan, India</span><span>2 jam lalu</span></div>
+            <div class="incident-timeline"><div class="timeline-step done"></div><div class="timeline-step active"></div><div class="timeline-step"></div><div class="timeline-step"></div></div>
           </div>
-
           <div class="incident-card">
-            <div class="incident-header">
-              <span class="incident-id">#WG-2024-4820</span>
-              <span class="incident-status status-resolved">SELESAI</span>
-            </div>
-            <div class="incident-title">
-              Kawanan gajah masuk lahan pertanian
-            </div>
-            <div class="incident-meta">
-              <span>🐘 Gajah</span><span>📍 Amboseli, Kenya</span
-              ><span>5 jam lalu</span>
-            </div>
-            <div class="incident-timeline">
-              <div class="timeline-step done"></div>
-              <div class="timeline-step done"></div>
-              <div class="timeline-step done"></div>
-              <div class="timeline-step done"></div>
-            </div>
+            <div class="incident-header"><span class="incident-id">#WG-2024-4820</span><span class="incident-status status-resolved">SELESAI</span></div>
+            <div class="incident-title">Kawanan gajah masuk lahan pertanian</div>
+            <div class="incident-meta"><span>🐘 Gajah</span><span>📍 Amboseli, Kenya</span><span>5 jam lalu</span></div>
+            <div class="incident-timeline"><div class="timeline-step done"></div><div class="timeline-step done"></div><div class="timeline-step done"></div><div class="timeline-step done"></div></div>
           </div>
-
           <div class="incident-card">
-            <div class="incident-header">
-              <span class="incident-id">#WG-2024-4819</span>
-              <span class="incident-status status-pending">MENUNGGU</span>
-            </div>
-            <div class="incident-title">
-              Orangutan terluka terlihat dekat jalan logging
-            </div>
-            <div class="incident-meta">
-              <span>🦧 Primata</span><span>📍 Kalimantan, Indonesia</span
-              ><span>8 jam lalu</span>
-            </div>
-            <div class="incident-timeline">
-              <div class="timeline-step active"></div>
-              <div class="timeline-step"></div>
-              <div class="timeline-step"></div>
-              <div class="timeline-step"></div>
-            </div>
+            <div class="incident-header"><span class="incident-id">#WG-2024-4819</span><span class="incident-status status-pending">MENUNGGU</span></div>
+            <div class="incident-title">Orangutan terluka terlihat dekat jalan logging</div>
+            <div class="incident-meta"><span>🦧 Primata</span><span>📍 Kalimantan, Indonesia</span><span>8 jam lalu</span></div>
+            <div class="incident-timeline"><div class="timeline-step active"></div><div class="timeline-step"></div><div class="timeline-step"></div><div class="timeline-step"></div></div>
           </div>
-
           <div class="incident-card">
-            <div class="incident-header">
-              <span class="incident-id">#WG-2024-4818</span>
-              <span class="incident-status status-resolved">SELESAI</span>
-            </div>
-            <div class="incident-title">
-              Pasar perdagangan satwa ilegal teridentifikasi
-            </div>
-            <div class="incident-meta">
-              <span>🦜 Burung</span><span>📍 Bangkok, Thailand</span
-              ><span>1 hari lalu</span>
-            </div>
-            <div class="incident-timeline">
-              <div class="timeline-step done"></div>
-              <div class="timeline-step done"></div>
-              <div class="timeline-step done"></div>
-              <div class="timeline-step done"></div>
-            </div>
+            <div class="incident-header"><span class="incident-id">#WG-2024-4818</span><span class="incident-status status-resolved">SELESAI</span></div>
+            <div class="incident-title">Pasar perdagangan satwa ilegal teridentifikasi</div>
+            <div class="incident-meta"><span>🦜 Burung</span><span>📍 Bangkok, Thailand</span><span>1 hari lalu</span></div>
+            <div class="incident-timeline"><div class="timeline-step done"></div><div class="timeline-step done"></div><div class="timeline-step done"></div><div class="timeline-step done"></div></div>
           </div>
-
           <div class="incident-card">
-            <div class="incident-header">
-              <span class="incident-id">#WG-2024-4817</span>
-              <span class="incident-status status-review">DITINJAU</span>
-            </div>
-            <div class="incident-title">
-              Cula badak ditemukan saat pemeriksaan bea cukai
-            </div>
-            <div class="incident-meta">
-              <span>🦏 Badak</span><span>📍 Bandara Nairobi</span
-              ><span>1 hari lalu</span>
-            </div>
-            <div class="incident-timeline">
-              <div class="timeline-step done"></div>
-              <div class="timeline-step active"></div>
-              <div class="timeline-step"></div>
-              <div class="timeline-step"></div>
-            </div>
+            <div class="incident-header"><span class="incident-id">#WG-2024-4817</span><span class="incident-status status-review">DITINJAU</span></div>
+            <div class="incident-title">Cula badak ditemukan saat pemeriksaan bea cukai</div>
+            <div class="incident-meta"><span>🦏 Badak</span><span>📍 Bandara Nairobi</span><span>1 hari lalu</span></div>
+            <div class="incident-timeline"><div class="timeline-step done"></div><div class="timeline-step active"></div><div class="timeline-step"></div><div class="timeline-step"></div></div>
           </div>
         </div>
       </div>
@@ -722,46 +777,24 @@
       <div class="impact-bg" id="impactBg"></div>
       <div class="impact-content">
         <div class="section-label">Dampak Nyata</div>
-        <h2
-          class="impact-content h2"
-          style="
-            font-family: var(--font-display);
-            font-size: clamp(2.2rem, 4.5vw, 4rem);
-            font-weight: 300;
-            max-width: 580px;
-            margin-bottom: 3.5rem;
-            line-height: 1.1;
-          "
-        >
-          Dampak Konservasi Kami<br /><em
-            style="font-style: italic; color: var(--sage-pale)"
-            >Sejauh Ini</em
-          >
+        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,4rem);font-weight:300;max-width:580px;margin-bottom:3.5rem;line-height:1.1">
+          Dampak Konservasi Kami<br/><em style="font-style:italic;color:var(--sage-pale)">Sejauh Ini</em>
         </h2>
         <div class="impact-cards">
           <div class="impact-card">
             <div class="impact-num" data-count="169420">0</div>
             <div class="impact-label">Kejadian Diselesaikan</div>
-            <p class="impact-desc">
-              Berhasil menangani kejadian satwa liar, dari penindakan perburuan
-              hingga penyelamatan hewan terluka.
-            </p>
+            <p class="impact-desc">Berhasil menangani kejadian satwa liar, dari penindakan perburuan hingga penyelamatan hewan terluka.</p>
           </div>
           <div class="impact-card">
             <div class="impact-num" data-count="260000" data-suffix="+">0</div>
             <div class="impact-label">Spesies Dipantau</div>
-            <p class="impact-desc">
-              Spesies yang aktif dilacak dengan kalung satelit, jebakan kamera,
-              dan tim lapangan terlatih.
-            </p>
+            <p class="impact-desc">Spesies yang aktif dilacak dengan kalung satelit, jebakan kamera, dan tim lapangan terlatih.</p>
           </div>
           <div class="impact-card">
             <div class="impact-num" data-count="183">0</div>
             <div class="impact-label">Negara Terlibat</div>
-            <p class="impact-desc">
-              Negara mitra yang berkontribusi ranger, data, dan dukungan
-              kebijakan untuk jaringan ini.
-            </p>
+            <p class="impact-desc">Negara mitra yang berkontribusi ranger, data, dan dukungan kebijakan untuk jaringan ini.</p>
           </div>
         </div>
       </div>
@@ -770,81 +803,20 @@
     <!-- ====== EDUKASI ====== -->
     <section id="education">
       <div class="section-header">
-        <div class="section-label">Pelajari & Bertindak</div>
-        <h2 class="section-title">
-          Bagaimana Anda Bisa <span>Membuat Perubahan</span>
-        </h2>
+        <div class="section-label">Pelajari &amp; Bertindak</div>
+        <h2 class="section-title">Bagaimana Anda Bisa <span>Membuat Perubahan</span></h2>
         <div class="section-rule"></div>
-        <p class="section-desc">
-          Tindakan individu terakumulasi. Berikut cara menjadi bagian dari
-          solusi nyata.
-        </p>
+        <p class="section-desc">Tindakan individu terakumulasi. Berikut cara menjadi bagian dari solusi nyata.</p>
       </div>
       <div class="edu-grid">
-        <div class="edu-card">
-          <div class="edu-icon">🚫</div>
-          <h3>Tolak Produk Ilegal</h3>
-          <p>
-            Jangan pernah membeli gading, cula badak, atau produk hewan eksotis.
-            Permintaan menciptakan pasar yang mendorong perburuan liar.
-          </p>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">📢</div>
-          <h3>Laporkan Kejahatan Satwa</h3>
-          <p>
-            Lihat sesuatu, katakan sesuatu. Gunakan sistem pelaporan kami untuk
-            segera menandai aktivitas mencurigakan kepada pihak berwenang.
-          </p>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">🌲</div>
-          <h3>Lindungi Hutan</h3>
-          <p>
-            Dukung minyak sawit berkelanjutan, kayu bersertifikat, dan proyek
-            penghijauan kembali. Setiap pohon sangat berarti.
-          </p>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">💚</div>
-          <h3>Dukung Konservasi</h3>
-          <p>
-            Donasikan ke program konservasi terpercaya, adopsi seekor hewan,
-            atau relawan bersama kelompok satwa liar lokal.
-          </p>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">🌿</div>
-          <h3>Makan Secara Berkelanjutan</h3>
-          <p>
-            Kurangi konsumsi daging, pilih makanan laut bersertifikat MSC, dan
-            utamakan produk lokal musiman.
-          </p>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">📸</div>
-          <h3>Wisata Satwa Etis</h3>
-          <p>
-            Pilih suaka alam daripada sirkus. Jangan pernah mendukung tempat
-            yang mengeksploitasi hewan liar untuk hiburan.
-          </p>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">🏫</div>
-          <h3>Edukasi Orang Lain</h3>
-          <p>
-            Bagikan pengetahuan kepada teman dan keluarga. Kesadaran komunitas
-            adalah garis pertahanan pertama melawan kejahatan satwa liar.
-          </p>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">🗳️</div>
-          <h3>Advokasi Kebijakan</h3>
-          <p>
-            Pilih pemimpin yang memprioritaskan perlindungan lingkungan. Tulis
-            surat kepada pembuat undang-undang mendukung legislasi satwa liar.
-          </p>
-        </div>
+        <div class="edu-card"><div class="edu-icon">🚫</div><h3>Tolak Produk Ilegal</h3><p>Jangan pernah membeli gading, cula badak, atau produk hewan eksotis. Permintaan menciptakan pasar yang mendorong perburuan liar.</p></div>
+        <div class="edu-card"><div class="edu-icon">📢</div><h3>Laporkan Kejahatan Satwa</h3><p>Lihat sesuatu, katakan sesuatu. Gunakan sistem pelaporan kami untuk segera menandai aktivitas mencurigakan kepada pihak berwenang.</p></div>
+        <div class="edu-card"><div class="edu-icon">🌲</div><h3>Lindungi Hutan</h3><p>Dukung minyak sawit berkelanjutan, kayu bersertifikat, dan proyek penghijauan kembali. Setiap pohon sangat berarti.</p></div>
+        <div class="edu-card"><div class="edu-icon">💚</div><h3>Dukung Konservasi</h3><p>Donasikan ke program konservasi terpercaya, adopsi seekor hewan, atau relawan bersama kelompok satwa liar lokal.</p></div>
+        <div class="edu-card"><div class="edu-icon">🌿</div><h3>Makan Secara Berkelanjutan</h3><p>Kurangi konsumsi daging, pilih makanan laut bersertifikat MSC, dan utamakan produk lokal musiman.</p></div>
+        <div class="edu-card"><div class="edu-icon">📸</div><h3>Wisata Satwa Etis</h3><p>Pilih suaka alam daripada sirkus. Jangan pernah mendukung tempat yang mengeksploitasi hewan liar untuk hiburan.</p></div>
+        <div class="edu-card"><div class="edu-icon">🏫</div><h3>Edukasi Orang Lain</h3><p>Bagikan pengetahuan kepada teman dan keluarga. Kesadaran komunitas adalah garis pertahanan pertama melawan kejahatan satwa liar.</p></div>
+        <div class="edu-card"><div class="edu-icon">🗳️</div><h3>Advokasi Kebijakan</h3><p>Pilih pemimpin yang memprioritaskan perlindungan lingkungan. Tulis surat kepada pembuat undang-undang mendukung legislasi satwa liar.</p></div>
       </div>
     </section>
 
@@ -852,21 +824,15 @@
     <section id="contact">
       <div class="section-header">
         <div class="section-label">Ikut Terlibat</div>
-        <h2 class="section-title">
-          Bergabunglah dengan <span>Jaringan LindungiSatwa</span>
-        </h2>
+        <h2 class="section-title">Bergabunglah dengan <span>Jaringan LindungiSatwa</span></h2>
       </div>
       <div class="contact-grid">
         <div class="contact-brand">
-          <div class="nav-logo" style="margin-bottom: 1rem">
+          <div class="nav-logo" style="margin-bottom:1rem">
             <div class="nav-logo-icon">🌿</div>
             <span class="nav-logo-text">Lindungi<span>Satwa</span></span>
           </div>
-          <p>
-            Jaringan global ranger, ilmuwan, dan warga negara yang bersatu
-            melindungi spesies paling rentan di Bumi. Setiap laporan, setiap
-            donasi, setiap suara sangat berarti.
-          </p>
+          <p>Jaringan global ranger, ilmuwan, dan warga negara yang bersatu melindungi spesies paling rentan di Bumi. Setiap laporan, setiap donasi, setiap suara sangat berarti.</p>
           <div class="social-links">
             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -908,10 +874,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 LindungiSatwa. Dibuat dengan 💚 untuk planet kita.</span>
-        <span
-          >Sumber data: <a href="#">IUCN</a> ·
-          <a href="#">Laporan Planet Hidup WWF</a> · <a href="#">CITES</a></span
-        >
+        <span>Sumber data: <a href="#">IUCN</a> · <a href="#">Laporan Planet Hidup WWF</a> · <a href="#">CITES</a></span>
       </div>
     </section>
 
