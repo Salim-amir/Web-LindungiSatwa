@@ -1,8 +1,3 @@
-// ============================================================
-//  WILDGUARD — PROFESSIONAL EDITION
-//  JavaScript · Interactions & Visualizations
-// ============================================================
-
 // ===== CUSTOM CURSOR =====
 const cursor = document.getElementById("cursor");
 const ring = document.getElementById("cursorRing");
