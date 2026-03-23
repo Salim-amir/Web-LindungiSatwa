@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232d6e2d'/><stop offset='100%25' stop-color='%234a8fa8'/></linearGradient></defs><text y='78' x='50' text-anchor='middle' font-size='65'>🌿</text></svg>">
-    <title>LindungiSatwa</title>
+    <title>LindungiSatwaIndonesia </title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
       rel="stylesheet"
@@ -45,13 +45,13 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="dot"></span>
-          Inisiatif Perlindungan Satwa Liar Global
+          Inisiatif Perlindungan Satwa Liar Indonesia
         </div>
         <h1 class="hero-title">
           <span class="line1">Peduli Lindungi</span>
           <span class="line2">Hewan</span>
           <p class="hero-subtitle">
-            Bersama kita dapat menyelamatkan spesies langka di Bumi. Setiap
+            Bersama kita dapat menyelamatkan spesies langka di Indonesia. Setiap
             tindakan yang Anda lakukan melindungi keanekaragaman hayati yang
             menopang kehidupan di planet kita.
           </p>
@@ -69,19 +69,16 @@
         </div>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num" data-count="47187">0</div>
-          <div class="hero-stat-label">Spesies Terancam</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num" data-count="16306">0</div>
-          <div class="hero-stat-label">Hampir Punah</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num" data-count="260000" data-suffix="+">0</div>
-          <div class="hero-stat-label">Kawasan Lindung</div>
-        </div>
+       <div class="hero-stat-num" data-count="1289">0</div>
+       <div class="hero-stat-label">Spesies Terancam di Indonesia</div>
+       
+       <div class="hero-stat-num" data-count="183">0</div>
+       <div class="hero-stat-label">Spesies Kritis</div>
+       
+       <div class="hero-stat-num" data-count="552" data-suffix="+">0</div>
+       <div class="hero-stat-label">Kawasan Konservasi</div>
       </div>
+
       <div class="hero-scroll">
         <div class="hero-scroll-line"></div>
       </div>
@@ -222,351 +219,34 @@
           </div>
         </div>
         <div class="map-main">
-          <svg id="wildlife-map-svg" viewBox="0 0 800 450">
-            <rect width="800" height="450" fill="#0a1e0a" />
-            <text
-              x="400"
-              y="230"
-              text-anchor="middle"
-              fill="rgba(245,242,236,0.04)"
-              font-size="11"
-              font-family="Outfit"
-            >
-              SAMUDRA
-            </text>
+          <svg viewBox="0 0 800 450">
+          <rect width="800" height="450" fill="#0a1e0a" />
 
-            <!-- Amerika Utara -->
-            <path
-              id="r-namerica"
-              class="map-region"
-              d="M80,60 L180,50 L230,80 L240,120 L220,160 L200,200 L180,230 L160,260 L130,280 L100,260 L70,220 L60,180 L50,140 L60,100Z"
-              fill="#1a3a1a"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Amerika Utara"
-              data-pop="Beberapa spesies besar"
-              data-risk="Tinggi"
-              data-status="endangered"
-            />
+          <!-- Sumatra -->
+          <ellipse cx="200" cy="250" rx="80" ry="120"
+            class="map-region"
+            data-name="Sumatra"
+            data-risk="Kritis" />
 
-            <!-- Amerika Selatan -->
-            <path
-              id="r-samerica"
-              class="map-region"
-              d="M160,280 L210,270 L240,290 L250,340 L240,390 L210,420 L180,430 L160,410 L145,370 L140,330 L145,300Z"
-              fill="#1e4a1e"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Cekungan Amazon"
-              data-pop="Hutan Hujan Amazon"
-              data-risk="Kritis"
-              data-status="critical"
-            />
+          <!-- Kalimantan -->
+          <ellipse cx="400" cy="220" rx="90" ry="100"
+            class="map-region"
+            data-name="Kalimantan"
+            data-risk="Kritis" />
 
-            <!-- Eropa -->
-            <path
-              id="r-europe"
-              class="map-region"
-              d="M360,50 L410,45 L430,60 L440,90 L420,110 L390,120 L365,105 L350,80Z"
-              fill="#1a3e1a"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Eropa"
-              data-pop="Spesies beriklim sedang"
-              data-risk="Sedang"
-              data-status="vulnerable"
-            />
+          <!-- Jawa -->
+          <ellipse cx="350" cy="350" rx="120" ry="40"
+            class="map-region"
+            data-name="Jawa"
+            data-risk="Tinggi" />
 
-            <!-- Afrika -->
-            <path
-              id="r-africa"
-              class="map-region"
-              d="M380,130 L430,120 L470,140 L490,180 L485,240 L460,290 L430,310 L400,300 L375,270 L360,230 L355,180 L360,150Z"
-              fill="#1a3a1a"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Afrika Sub-Sahara"
-              data-pop="Lima Besar & lebih"
-              data-risk="Kritis"
-              data-status="critical"
-            />
-            <path
-              d="M380,130 L430,120 L470,140 L490,180 L485,240 L460,290 L430,310 L400,300 L375,270 L360,230 L355,180 L360,150Z"
-              fill="rgba(192,57,43,0.22)"
-              stroke="rgba(192,57,43,0.35)"
-              stroke-width="1"
-              pointer-events="none"
-            />
+          <!-- Papua -->
+          <ellipse cx="650" cy="250" rx="120" ry="100"
+            class="map-region"
+            data-name="Papua"
+            data-risk="Sedang" />
+        </svg>
 
-            <!-- Asia -->
-            <path
-              id="r-asia"
-              class="map-region"
-              d="M490,60 L600,50 L680,70 L700,110 L690,160 L650,190 L580,200 L520,180 L480,150 L470,110 L480,80Z"
-              fill="#1a3e1a"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Asia Selatan/Tenggara"
-              data-pop="Harimau, gajah, orangutan"
-              data-risk="Kritis"
-              data-status="critical"
-            />
-            <path
-              d="M490,60 L600,50 L680,70 L700,110 L690,160 L650,190 L580,200 L520,180 L480,150 L470,110 L480,80Z"
-              fill="rgba(192,57,43,0.18)"
-              pointer-events="none"
-            />
-
-            <!-- Australia -->
-            <path
-              id="r-australia"
-              class="map-region"
-              d="M620,250 L700,240 L740,260 L750,310 L720,350 L670,360 L630,340 L610,300 L615,270Z"
-              fill="#1e3e1a"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Australasia"
-              data-pop="Spesies endemik unik"
-              data-risk="Tinggi"
-              data-status="endangered"
-            />
-            <path
-              d="M620,250 L700,240 L740,260 L750,310 L720,350 L670,360 L630,340 L610,300 L615,270Z"
-              fill="rgba(212,135,10,0.18)"
-              pointer-events="none"
-            />
-
-            <!-- Russia -->
-            <path
-              id="r-russia"
-              class="map-region"
-              d="M470,30 L600,20 L720,30 L750,55 L700,70 L600,50 L490,60 L470,45Z"
-              fill="#182e18"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Hutan Boreal"
-              data-pop="Harimau Siberia, beruang"
-              data-risk="Sedang"
-              data-status="vulnerable"
-            />
-
-            <!-- India -->
-            <path
-              id="r-india"
-              class="map-region"
-              d="M560,165 L600,160 L615,200 L605,240 L580,260 L555,250 L540,220 L545,185Z"
-              fill="#1a3a1a"
-              stroke="rgba(245,242,236,0.08)"
-              stroke-width="1"
-              cursor="pointer"
-              data-name="Anak Benua India"
-              data-pop="Harimau, macan tutul, badak"
-              data-risk="Tinggi"
-              data-status="endangered"
-            />
-            <path
-              d="M560,165 L600,160 L615,200 L605,240 L580,260 L555,250 L540,220 L545,185Z"
-              fill="rgba(212,135,10,0.22)"
-              pointer-events="none"
-            />
-
-            <!-- Borneo/Sumatra -->
-            <ellipse
-              cx="660"
-              cy="220"
-              rx="30"
-              ry="18"
-              fill="rgba(192,57,43,0.28)"
-              stroke="rgba(192,57,43,0.35)"
-              stroke-width="1"
-              cursor="pointer"
-              id="r-sea"
-              class="map-region"
-              data-name="Kalimantan / Sumatra"
-              data-pop="Orangutan, harimau Sumatera"
-              data-risk="Kritis"
-              data-status="critical"
-            />
-            <text
-              x="660"
-              y="225"
-              text-anchor="middle"
-              fill="rgba(245,242,236,0.45)"
-              font-size="7"
-              font-family="Outfit"
-            >
-              Borneo
-            </text>
-
-            <!-- Penanda kejadian -->
-            <g class="incident-markers">
-              <circle cx="200" cy="160" r="5" fill="#c0392b" opacity=".8">
-                <animate
-                  attributeName="r"
-                  values="5;10;5"
-                  dur="2s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  values=".8;.15;.8"
-                  dur="2s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="430" cy="200" r="5" fill="#c0392b" opacity=".8">
-                <animate
-                  attributeName="r"
-                  values="5;10;5"
-                  dur="2.3s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  values=".8;.15;.8"
-                  dur="2.3s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="580" cy="120" r="6" fill="#c0392b" opacity=".9">
-                <animate
-                  attributeName="r"
-                  values="6;12;6"
-                  dur="1.8s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  values=".9;.15;.9"
-                  dur="1.8s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="660" cy="220" r="4" fill="#d4870a" opacity=".8">
-                <animate
-                  attributeName="r"
-                  values="4;9;4"
-                  dur="2.5s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="580" cy="230" r="4" fill="#c9a84c" opacity=".7">
-                <animate
-                  attributeName="r"
-                  values="4;8;4"
-                  dur="3s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="170" cy="350" r="4" fill="#d4870a" opacity=".7">
-                <animate
-                  attributeName="r"
-                  values="4;9;4"
-                  dur="2.2s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="700" cy="290" r="3" fill="#3d8b3d" opacity=".8">
-                <animate
-                  attributeName="r"
-                  values="3;7;3"
-                  dur="2.8s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
-
-            <!-- Grid lines -->
-            <line
-              x1="0"
-              y1="225"
-              x2="800"
-              y2="225"
-              stroke="rgba(245,242,236,0.04)"
-              stroke-width="1"
-            />
-            <line
-              x1="400"
-              y1="0"
-              x2="400"
-              y2="450"
-              stroke="rgba(245,242,236,0.04)"
-              stroke-width="1"
-            />
-            <text
-              x="5"
-              y="220"
-              fill="rgba(245,242,236,0.12)"
-              font-size="8"
-              font-family="JetBrains Mono"
-            >
-              EQ
-            </text>
-
-            <!-- Labels -->
-            <text
-              x="120"
-              y="160"
-              text-anchor="middle"
-              fill="rgba(245,242,236,0.2)"
-              font-size="7"
-              font-family="Outfit"
-              pointer-events="none"
-            >
-              AM. UTARA
-            </text>
-            <text
-              x="195"
-              y="360"
-              text-anchor="middle"
-              fill="rgba(245,242,236,0.2)"
-              font-size="7"
-              font-family="Outfit"
-              pointer-events="none"
-            >
-              AM. SELATAN
-            </text>
-            <text
-              x="425"
-              y="215"
-              text-anchor="middle"
-              fill="rgba(245,242,236,0.2)"
-              font-size="7"
-              font-family="Outfit"
-              pointer-events="none"
-            >
-              AFRIKA
-            </text>
-            <text
-              x="580"
-              y="118"
-              text-anchor="middle"
-              fill="rgba(245,242,236,0.2)"
-              font-size="7"
-              font-family="Outfit"
-              pointer-events="none"
-            >
-              ASIA
-            </text>
-            <text
-              x="685"
-              y="300"
-              text-anchor="middle"
-              fill="rgba(245,242,236,0.2)"
-              font-size="7"
-              font-family="Outfit"
-              pointer-events="none"
-            >
-              AUSTRALIA
-            </text>
-          </svg>
           <div class="map-popup" id="mapPopup">
             <h4 id="popupName">Nama Wilayah</h4>
             <p id="popupPop"></p>
@@ -603,7 +283,7 @@
       <div class="dashboard-grid">
         <div class="chart-card wide">
           <h4>Tren Populasi</h4>
-          <h3>Indeks Populasi Satwa Liar Global (1970–2024)</h3>
+          <h3>Indeks Populasi Satwa Liar Indonesia (1970–2024)</h3>
           <div class="chart-wrapper">
             <canvas id="populationChart"></canvas>
           </div>
