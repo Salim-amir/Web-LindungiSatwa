@@ -139,53 +139,56 @@
 
   <!-- ====== PETA SATWA LIAR INDONESIA ====== -->
   <section id="wildlife-map">
-    <div class="section-header">
-      <div class="section-label">Peta Intelejen</div>
-      <h2 class="section-title">
-        Monitor <span>Habitat Satwa Liar Indonesia</span>
-      </h2>
-      <div class="section-rule"></div>
-      <p class="section-desc">
-        Pantau habitat spesies endemik Indonesia yang terancam, zona risiko
-        perburuan liar, dan kawasan konservasi nasional dari Sabang sampai
-        Merauke.
-      </p>
-    </div>
-      <div class="map-main" id="mapContainer">
+    <div class="map-main" id="mapContainer">
 
-        <svg viewBox="0 0 900 400">
+  <svg viewBox="0 0 900 400">
 
-          <!-- titik tetap -->
-          <circle class="map-point" cx="100" cy="180" r="8" data-name="Sumatera" data-pop="Harimau, Orangutan, Gajah"
-            data-risk="Kritis" />
+    <!-- titik tetap -->
+    <circle class="map-point" cx="120" cy="180" r="8"
+      data-name="Sumatera"
+      data-pop="Harimau, Orangutan, Gajah"
+      data-risk="Kritis" />
 
-          <circle class="map-point" cx="300" cy="280" r="8" data-name="Jawa" data-pop="Badak Jawa, Elang Jawa"
-            data-risk="Kritis" />
+    <circle class="map-point" cx="240" cy="300" r="8"
+      data-name="Jawa"
+      data-pop="Badak Jawa, Elang Jawa"
+      data-risk="Kritis" />
 
-          <circle class="map-point" cx="420" cy="160" r="8" data-name="Kalimantan" data-pop="Orangutan, Bekantan"
-            data-risk="Kritis" />
+    <circle class="map-point" cx="360" cy="160" r="8"
+      data-name="Kalimantan"
+      data-pop="Orangutan, Bekantan"
+      data-risk="Kritis" />
 
-          <circle class="map-point" cx="600" cy="180" r="8" data-name="Sulawesi" data-pop="Anoa, Babirusa"
-            data-risk="Tinggi" />
+    <circle class="map-point" cx="500" cy="180" r="8"
+      data-name="Sulawesi"
+      data-pop="Anoa, Babirusa"
+      data-risk="Tinggi" />
 
-          <circle class="map-point" cx="820" cy="170" r="8" data-name="Papua" data-pop="Cendrawasih, Kasuari"
-            data-risk="Sedang" />
+    <circle class="map-point" cx="820" cy="220" r="8"
+      data-name="Papua"
+      data-pop="Cendrawasih, Kasuari"
+      data-risk="Sedang" />
 
-          <circle class="map-point" cx="650" cy="300" r="8" data-name="Nusa Tenggara" data-pop="Komodo"
-            data-risk="Tinggi" />
+    <circle class="map-point" cx="450" cy="340" r="8"
+      data-name="Nusa Tenggara"
+      data-pop="Komodo"
+      data-risk="Tinggi" />
 
-          <circle class="map-point" cx="720" cy="200" r="8" data-name="Maluku" data-pop="Kakatua" data-risk="Sedang" />
+    <circle class="map-point" cx="720" cy="200" r="8"
+      data-name="Maluku"
+      data-pop="Kakatua"
+      data-risk="Sedang" />
 
-        </svg>
+  </svg>
 
-        <!-- POPUP -->
-        <div id="mapPopup" class="map-popup">
-          <h4 id="popupName"></h4>
-          <p id="popupPop"></p>
-          <p id="popupRisk"></p>
-        </div>
+  <!-- POPUP -->
+  <div id="mapPopup" class="map-popup">
+    <h4 id="popupName"></h4>
+    <p id="popupPop"></p>
+    <p id="popupRisk"></p>
+  </div>
 
-      </div>
+</div>
 
       <!-- INFO -->
       <div class="timeline-control">

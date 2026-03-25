@@ -75,26 +75,39 @@ function animateCount(el) {
 }
 
 // ===== MAP INTERACTIONS =====
-document.querySelectorAll(".map-region").forEach((region) => {
-  const popup = document.getElementById("mapPopup"); const svg = document.getElementById("wildlife-map-svg");
-  region.addEventListener("mouseenter", function () {
-    const { name, pop, risk, status } = this.dataset;
-    document.getElementById("popupName").textContent = name;
-    document.getElementById("popupPop").textContent = "🌿 " + pop;
-    document.getElementById("popupRisk").textContent = "⚠️ Tingkat Risiko: " + risk;
-    const badge = document.getElementById("popupStatus"); badge.className = "status-badge status-" + status;
-    const labels = { critical: "KRITIS", endangered: "TERANCAM PUNAH", vulnerable: "RENTAN", stable: "STABIL" };
-    badge.textContent = labels[status] || status.toUpperCase(); popup.classList.add("visible");
-    document.getElementById("mapInfoCard").innerHTML = `<h4>Wilayah Dipilih</h4><p style="font-weight:600;color:var(--white);margin-bottom:.35rem">${name}</p><p style="color:rgba(245,242,236,.45);font-size:.74rem;margin-bottom:.35rem">${pop}</p><p style="color:rgba(245,242,236,.45);font-size:.74rem">Risiko: <span style="color:var(--amber)">${risk}</span></p><span class="status-badge status-${status}" style="margin-top:.5rem;display:inline-block">${labels[status] || status}</span>`;
-  });
-  region.addEventListener("mouseleave", () => popup.classList.remove("visible"));
-  region.addEventListener("mousemove", function (e) {
-    const svgRect = svg.parentElement.getBoundingClientRect();
-    let px = e.clientX - svgRect.left + 18; let py = e.clientY - svgRect.top + 12;
-    if (px + 230 > svgRect.width) px -= 248; popup.style.left = px + "px"; popup.style.top = py + "px";
+document.addEventListener("DOMContentLoaded", () => {
+  const points = document.querySelectorAll('.map-point');
+  const popup = document.getElementById('mapPopup');
+  const container = document.getElementById('mapContainer');
+
+  const popupName = document.getElementById('popupName');
+  const popupPop = document.getElementById('popupPop');
+  const popupRisk = document.getElementById('popupRisk');
+
+  points.forEach(point => {
+    point.addEventListener('mouseenter', () => {
+      popup.style.opacity = 1;
+      popupName.innerText = point.dataset.name;
+      popupPop.innerText = "Satwa: " + point.dataset.pop;
+      popupRisk.innerText = "Status: " + point.dataset.risk;
+    });
+
+    point.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+
+      // posisi RELATIF ke container (INI FIX UTAMA)
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      popup.style.left = x + 'px';
+      popup.style.top = y + 'px';
+    });
+
+    point.addEventListener('mouseleave', () => {
+      popup.style.opacity = 0;
+    });
   });
 });
-function toggleLayer(btn) { btn.classList.toggle("active"); }
 
 // ===== CHARTS — FOKUS INDONESIA =====
 Chart.defaults.color = "rgba(245,242,236,0.4)";
