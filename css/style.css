@@ -389,7 +389,7 @@ nav.scrolled {
       rgba(8, 15, 8, 0.55) 55%,
       var(--ink) 100%
     ),
-    url("https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1920&q=80")
+    url("../assets/img/komodo-hero.jpeg")
       center/cover no-repeat;
   transform: translateZ(0);
   will-change: transform;
@@ -745,26 +745,16 @@ nav.scrolled {
   flex-direction: column;
   gap: 1px;
 }
-.map-filter-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 0;
-  padding: 1.4rem;
-  backdrop-filter: blur(20px);
+.map-point {
+  fill: #d4870a;
+  stroke: white;
+  stroke-width: 100;
+  transition: 0.3s;
 }
-.map-filter-card:first-child {
-  border-radius: 4px 4px 0 0;
-}
-.map-filter-card:last-child {
-  border-radius: 0 0 4px 4px;
-}
-.map-filter-card h4 {
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: rgba(245, 242, 236, 0.35);
-  margin-bottom: 0.9rem;
+
+.map-point:hover {
+  fill: #c0392b;
+  r: 12;
 }
 .filter-btn {
   display: flex;
@@ -810,129 +800,50 @@ nav.scrolled {
 }
 .map-main {
   position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-  border: 1px solid var(--glass-border);
-  background: none;
+  aspect-ratio: 900 / 400;
+  background: url('../assets/img/peta-indo.png') center/cover no-repeat;
 }
 
-.map-main::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('../assets/peta-indo.png') center/cover no-repeat;
-  opacity: 0.3;
-  filter: grayscale(100%) contrast(1.2);
-  z-index: 0;
+/* TITIK */
+.map-point {
+  fill: #11ff00;
+  stroke: white;
+  stroke-width: 2;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-#wildlife-map-svg {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 500px;
-  display: block;
-  cursor: crosshair;
+.map-point:hover {
+  fill: #ffcc00;
+   stroke-opacity: 0.8;
+  r: 10;
 }
+
+/* POPUP */
 .map-popup {
   position: absolute;
-  background: rgba(8, 15, 8, 0.97);
-  border: 1px solid rgba(122, 171, 122, 0.2);
-  border-radius: 4px;
-  padding: 1.1rem 1.3rem;
-  width: 230px;
-  backdrop-filter: blur(24px);
-  font-size: 0.8rem;
+  background: #59bc039c;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.2s;
-  z-index: 100;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -120%);
+  transition: 0.2s;
+  z-index: 9999;
+  min-width: 160px;
 }
-.map-popup.visible {
-  opacity: 1;
-}
+
+/* text */
 .map-popup h4 {
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--sage-pale);
+  margin: 0 0 5px;
+  color: #ffffff;
 }
+
 .map-popup p {
-  color: rgba(245, 242, 236, 0.55);
-  margin-bottom: 0.3rem;
-  font-size: 0.76rem;
+  margin: 2px 0;
 }
-.status-badge {
-  display: inline-block;
-  padding: 0.15rem 0.6rem;
-  border-radius: 2px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  margin-top: 0.4rem;
-  font-family: var(--font-mono);
-  letter-spacing: 0.5px;
-}
-.status-critical {
-  background: rgba(192, 57, 43, 0.2);
-  color: #e87a6f;
-}
-.status-endangered {
-  background: rgba(212, 135, 10, 0.2);
-  color: #f0b75a;
-}
-.status-vulnerable {
-  background: rgba(201, 168, 76, 0.2);
-  color: var(--gold-pale);
-}
-.status-stable {
-  background: rgba(45, 110, 45, 0.2);
-  color: var(--sage);
-}
-.timeline-control {
-  padding: 1rem 1.5rem;
-  background: rgba(245, 242, 236, 0.02);
-  border-top: 1px solid var(--glass-border);
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.timeline-label {
-  font-size: 0.7rem;
-  color: rgba(245, 242, 236, 0.35);
-  white-space: nowrap;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.timeline-slider {
-  flex: 1;
-  -webkit-appearance: none;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    var(--forest-mid) 60%,
-    rgba(245, 242, 236, 0.08) 60%
-  );
-  border-radius: 1px;
-  outline: none;
-  cursor: pointer;
-}
-.timeline-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  background: var(--sage-pale);
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(184, 217, 184, 0.4);
-}
-.timeline-year {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--sage);
-  min-width: 50px;
-}
+
 
 /* ===== DASHBOARD ===== */
 #dashboard {
@@ -998,15 +909,7 @@ nav.scrolled {
   position: relative;
   overflow: hidden;
 }
-#animal-spotlight::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1920&q=60")
-    center/cover no-repeat;
-  opacity: 0.04;
-  will-change: transform;
-}
+
 .spotlight-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1391,7 +1294,7 @@ nav.scrolled {
   inset: -80px;
   background:
     linear-gradient(rgba(8, 15, 8, 0.8), rgba(8, 15, 8, 0.8)),
-    url("https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=70")
+    url("../assets/img/tanduk.jpg")
       center/cover no-repeat;
   will-change: transform;
 }
@@ -1785,6 +1688,28 @@ nav.scrolled {
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+/* map */
+@media (max-width: 480px) {
+  .map-main {
+    aspect-ratio: 950 / 250;
+  }
+
+  .map-popup {
+    font-size: 0.7rem;
+    padding: 8px;
+    min-width: 120px;
+    max-width: 160px;
+  }
+
+  .map-popup h4 {
+    font-size: 0.8rem;
+  }
+
+  .map-point {
+    stroke-width: 1;
+  }
 }
 
 /* ===== FORM VALIDATION ===== */
