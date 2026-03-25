@@ -1,841 +1,1153 @@
 <!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232d6e2d'/><stop offset='100%25' stop-color='%234a8fa8'/></linearGradient></defs><text y='78' x='50' text-anchor='middle' font-size='65'>🌿</text></svg>"
+    />
+    <title>LindungiSatwa</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232d6e2d'/><stop offset='100%25' stop-color='%234a8fa8'/></linearGradient></defs><text y='78' x='50' text-anchor='middle' font-size='65'>🌿</text></svg>" />
-  <title>LindungiSatwa</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-<body>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">🌿</div>
+        <span class="nav-logo-text">Lindungi<span>Satwa</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#stats-overview">Tentang</a></li>
+        <li><a href="#wildlife-map">Peta</a></li>
+        <li><a href="#dashboard">Data</a></li>
+        <li><a href="#animal-spotlight">Satwa</a></li>
+        <li><a href="#incident-reporting">Laporkan</a></li>
+        <li><a href="#education">Pelajari</a></li>
+        <li><a href="#contact" class="nav-cta">Kontak</a></li>
+      </ul>
+    </nav>
 
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">
-      <div class="nav-logo-icon">🌿</div>
-      <span class="nav-logo-text">Lindungi<span>Satwa</span></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#stats-overview">Tentang</a></li>
-      <li><a href="#wildlife-map">Peta</a></li>
-      <li><a href="#dashboard">Data</a></li>
-      <li><a href="#animal-spotlight">Satwa</a></li>
-      <li><a href="#incident-reporting">Laporkan</a></li>
-      <li><a href="#education">Pelajari</a></li>
-      <li><a href="#contact" class="nav-cta">Kontak</a></li>
-    </ul>
-  </nav>
-
-  <section id="hero">
-    <div class="hero-parallax-bg" id="heroBg"></div>
-    <div class="hero-overlay-lines"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="dot"></span>
-        Inisiatif Perlindungan Satwa Liar Global
-      </div>
-      <h1 class="hero-title">
-        <span class="line1">Peduli Lindungi</span>
-        <span class="line2">Hewan</span>
-        <p class="hero-subtitle">
-          Bersama kita dapat menyelamatkan spesies langka di Bumi. Setiap
-          tindakan yang Anda lakukan melindungi keanekaragaman hayati yang
-          menopang kehidupan di planet kita.
-        </p>
-      </h1>
-      <div class="hero-actions">
-        <a href="#incident-reporting" class="btn-primary">
-          <i class="fas fa-exclamation-triangle"></i>
-          Laporkan Kejadian
-        </a>
-        <a href="#animal-spotlight" class="btn-outline">
-          <i class="fas fa-paw"></i>
-          Jelajahi Satwa
-        </a>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="hero-scroll-line"></div>
-    </div>
-    <div class="hero-foreground" id="heroFg"></div>
-  </section>
-
-  <section id="forest-depth">
-    <div class="forest-layer forest-bg"></div>
-    <div class="forest-layer forest-mountains" id="fMountains"></div>
-    <div class="forest-layer forest-hills" id="fHills"></div>
-    <div class="forest-layer forest-trees-back" id="fTreesBack"></div>
-    <div class="forest-layer forest-trees-front" id="fTreesFront"></div>
-    <div class="forest-layer forest-fog"></div>
-    <div class="silhouette" style="left: 14%; top: 28%; font-size: 4rem">
-      🦅
-    </div>
-    <div class="silhouette" style="right: 13%; top: 38%; font-size: 5rem">
-      🐘
-    </div>
-    <div class="silhouette" style="left: 44%; bottom: 22%; font-size: 3.2rem">
-      🐅
-    </div>
-    <div class="forest-text">
-      <h2>Setiap Hutan Adalah<br />Dunia Tersendiri</h2>
-      <p>
-        Jutaan spesies bergantung pada ekosistem yang utuh. Ketika hutan
-        hancur, seluruh dunia ikut lenyap untuk selamanya.
-      </p>
-    </div>
-  </section>
-
-  <section id="stats-overview">
-    <div class="section-header">
-      <div class="section-label">Krisis yang Terjadi</div>
-      <h2 class="section-title">
-        Satwa Liar dalam <span>Bahaya Kritis</span>
-      </h2>
-      <div class="section-rule"></div>
-      <p class="section-desc">
-        Planet ini sedang mengalami kepunahan massal keenam. Aktivitas manusia
-        mendorong spesies menuju kepunahan 1.000 kali lebih cepat dari laju
-        alami.
-      </p>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <span class="stat-card-icon">🐾</span>
-        <div class="stat-card-num" data-count="47187">0</div>
-        <div class="stat-card-label">Spesies Terancam</div>
-        <div class="stat-card-trend trend-down">↑ 4% tahun ini</div>
-      </div>
-      <div class="stat-card">
-        <span class="stat-card-icon">⚠️</span>
-        <div class="stat-card-num" data-count="873">0</div>
-        <div class="stat-card-label">Zona Risiko Tinggi</div>
-        <div class="stat-card-trend trend-down">↑ 12% sejak 2020</div>
-      </div>
-      <div class="stat-card">
-        <span class="stat-card-icon">🌿</span>
-        <div class="stat-card-num" data-count="73">0</div>
-        <div class="stat-card-label">% Penurunan Satwa (50 Thn)</div>
-        <div class="stat-card-trend trend-down">
-          Rata-rata penurunan populasi
+    <section id="hero">
+      <div class="hero-parallax-bg" id="heroBg"></div>
+      <div class="hero-overlay-lines"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Inisiatif Perlindungan Satwa Liar Global
+        </div>
+        <h1 class="hero-title">
+          <span class="line1">Peduli Lindungi</span>
+          <span class="line2">Hewan</span>
+          <p class="hero-subtitle">
+            Bersama kita dapat menyelamatkan spesies langka di Bumi. Setiap
+            tindakan yang Anda lakukan melindungi keanekaragaman hayati yang
+            menopang kehidupan di planet kita.
+          </p>
+        </h1>
+        <div class="hero-actions">
+          <a href="#incident-reporting" class="btn-primary">
+            <i class="fas fa-exclamation-triangle"></i>
+            Laporkan Kejadian
+          </a>
+          <a href="#animal-spotlight" class="btn-outline">
+            <i class="fas fa-paw"></i>
+            Jelajahi Satwa
+          </a>
         </div>
       </div>
-      <div class="stat-card">
-        <span class="stat-card-icon">✅</span>
-        <div class="stat-card-num" data-count="34">0</div>
-        <div class="stat-card-label">% Keberhasilan Konservasi</div>
-        <div class="stat-card-trend trend-up">↑ 8% peningkatan</div>
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
       </div>
-    </div>
-  </section>
+      <div class="hero-foreground" id="heroFg"></div>
+    </section>
 
-  <!-- ====== PETA SATWA LIAR INDONESIA ====== -->
-  <section id="wildlife-map">
-    <div class="section-header">
-      <div class="section-label">Peta Intelejen</div>
-      <h2 class="section-title">
-        Monitor <span>Habitat Satwa Liar Indonesia</span>
-      </h2>
-      <div class="section-rule"></div>
-      <p class="section-desc">
-        Pantau habitat spesies endemik Indonesia yang terancam, zona risiko
-        perburuan liar, dan kawasan konservasi nasional dari Sabang sampai
-        Merauke.
-      </p>
-    </div>
+    <section id="forest-depth">
+      <div class="forest-layer forest-bg"></div>
+      <div class="forest-layer forest-mountains" id="fMountains"></div>
+      <div class="forest-layer forest-hills" id="fHills"></div>
+      <div class="forest-layer forest-trees-back" id="fTreesBack"></div>
+      <div class="forest-layer forest-trees-front" id="fTreesFront"></div>
+      <div class="forest-layer forest-fog"></div>
+      <div class="silhouette" style="left: 14%; top: 28%; font-size: 4rem">
+        🦅
+      </div>
+      <div class="silhouette" style="right: 13%; top: 38%; font-size: 5rem">
+        🐘
+      </div>
+      <div class="silhouette" style="left: 44%; bottom: 22%; font-size: 3.2rem">
+        🐅
+      </div>
+      <div class="forest-text">
+        <h2>Setiap Hutan Adalah<br />Dunia Tersendiri</h2>
+        <p>
+          Jutaan spesies bergantung pada ekosistem yang utuh. Ketika hutan
+          hancur, seluruh dunia ikut lenyap untuk selamanya.
+        </p>
+      </div>
+    </section>
+
+    <section id="stats-overview">
+      <div class="section-header">
+        <div class="section-label">Krisis yang Terjadi</div>
+        <h2 class="section-title">
+          Satwa Liar dalam <span>Bahaya Kritis</span>
+        </h2>
+        <div class="section-rule"></div>
+        <p class="section-desc">
+          Planet ini sedang mengalami kepunahan massal keenam. Aktivitas manusia
+          mendorong spesies menuju kepunahan 1.000 kali lebih cepat dari laju
+          alami.
+        </p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-card-icon">🐾</span>
+          <div class="stat-card-num" data-count="47187">0</div>
+          <div class="stat-card-label">Spesies Terancam</div>
+          <div class="stat-card-trend trend-down">↑ 4% tahun ini</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-icon">⚠️</span>
+          <div class="stat-card-num" data-count="873">0</div>
+          <div class="stat-card-label">Zona Risiko Tinggi</div>
+          <div class="stat-card-trend trend-down">↑ 12% sejak 2020</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-icon">🌿</span>
+          <div class="stat-card-num" data-count="73">0</div>
+          <div class="stat-card-label">% Penurunan Satwa (50 Thn)</div>
+          <div class="stat-card-trend trend-down">
+            Rata-rata penurunan populasi
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-icon">✅</span>
+          <div class="stat-card-num" data-count="34">0</div>
+          <div class="stat-card-label">% Keberhasilan Konservasi</div>
+          <div class="stat-card-trend trend-up">↑ 8% peningkatan</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PETA SATWA LIAR INDONESIA ====== -->
+    <section id="wildlife-map">
+      <div class="section-header">
+        <div class="section-label">Peta Intelejen</div>
+        <h2 class="section-title">
+          Monitor <span>Habitat Satwa Liar Indonesia</span>
+        </h2>
+        <div class="section-rule"></div>
+        <p class="section-desc">
+          Pantau habitat spesies endemik Indonesia yang terancam, zona risiko
+          perburuan liar, dan kawasan konservasi nasional dari Sabang sampai
+          Merauke.
+        </p>
+      </div>
       <div class="map-main" id="mapContainer">
-
         <svg viewBox="0 0 900 400">
-
-          <!-- titik tetap -->
-          <circle class="map-point" cx="100" cy="180" r="8" data-name="Sumatera" data-pop="Harimau, Orangutan, Gajah"
-            data-risk="Kritis" />
-
-          <circle class="map-point" cx="300" cy="280" r="8" data-name="Jawa" data-pop="Badak Jawa, Elang Jawa"
-            data-risk="Kritis" />
-
-          <circle class="map-point" cx="420" cy="160" r="8" data-name="Kalimantan" data-pop="Orangutan, Bekantan"
-            data-risk="Kritis" />
-
-          <circle class="map-point" cx="600" cy="180" r="8" data-name="Sulawesi" data-pop="Anoa, Babirusa"
-            data-risk="Tinggi" />
-
-          <circle class="map-point" cx="820" cy="170" r="8" data-name="Papua" data-pop="Cendrawasih, Kasuari"
-            data-risk="Sedang" />
-
-          <circle class="map-point" cx="650" cy="300" r="8" data-name="Nusa Tenggara" data-pop="Komodo"
-            data-risk="Tinggi" />
-
-          <circle class="map-point" cx="720" cy="200" r="8" data-name="Maluku" data-pop="Kakatua" data-risk="Sedang" />
-
+          <circle
+            class="map-point"
+            cx="100"
+            cy="180"
+            r="8"
+            data-name="Sumatera"
+            data-pop="Harimau, Orangutan, Gajah"
+            data-risk="Kritis"
+          />
+          <circle
+            class="map-point"
+            cx="300"
+            cy="280"
+            r="8"
+            data-name="Jawa"
+            data-pop="Badak Jawa, Elang Jawa"
+            data-risk="Kritis"
+          />
+          <circle
+            class="map-point"
+            cx="420"
+            cy="160"
+            r="8"
+            data-name="Kalimantan"
+            data-pop="Orangutan, Bekantan"
+            data-risk="Kritis"
+          />
+          <circle
+            class="map-point"
+            cx="600"
+            cy="180"
+            r="8"
+            data-name="Sulawesi"
+            data-pop="Anoa, Babirusa"
+            data-risk="Tinggi"
+          />
+          <circle
+            class="map-point"
+            cx="820"
+            cy="170"
+            r="8"
+            data-name="Papua"
+            data-pop="Cendrawasih, Kasuari"
+            data-risk="Sedang"
+          />
+          <circle
+            class="map-point"
+            cx="650"
+            cy="300"
+            r="8"
+            data-name="Nusa Tenggara"
+            data-pop="Komodo"
+            data-risk="Tinggi"
+          />
+          <circle
+            class="map-point"
+            cx="720"
+            cy="200"
+            r="8"
+            data-name="Maluku"
+            data-pop="Kakatua"
+            data-risk="Sedang"
+          />
         </svg>
-
-        <!-- POPUP -->
         <div id="mapPopup" class="map-popup">
           <h4 id="popupName"></h4>
           <p id="popupPop"></p>
           <p id="popupRisk"></p>
         </div>
-
       </div>
-
-      <!-- INFO -->
       <div class="timeline-control">
         Sumber Data: IUCN · KLHK · WWF · LIPI (2025)
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ====== DASBOR ====== -->
-  <section id="dashboard">
-    <div class="section-header">
-      <div class="section-label">Analitik</div>
-      <h2 class="section-title">
-        Dasbor <span>Intelejen Satwa Liar Indonesia</span>
-      </h2>
-      <div class="section-rule"></div>
-      <p class="section-desc">
-        Visualisasi data populasi satwa liar kunci, ancaman utama, sebaran
-        spesies terancam, serta kondisi tutupan hutan di seluruh kepulauan
-        Indonesia berdasarkan data resmi terkini.
-      </p>
-    </div>
-    <div class="dashboard-grid">
-      <div class="chart-card wide">
-        <h4>Tren Populasi 1980–2024</h4>
-        <h3>Dinamika Populasi 4 Satwa Kunci Indonesia</h3>
-        <div class="chart-wrapper">
-          <canvas id="populationChart"></canvas>
-        </div>
-        <div class="chart-source">
-          <span class="src-label">Sumber:</span>
-          IUCN Red List (2024) · WWF Indonesia · Kementerian LHK RI · BRIN
-        </div>
+    <!-- ====== DASBOR ====== -->
+    <section id="dashboard">
+      <div class="section-header">
+        <div class="section-label">Analitik</div>
+        <h2 class="section-title">
+          Dasbor <span>Intelejen Satwa Liar Indonesia</span>
+        </h2>
+        <div class="section-rule"></div>
+        <p class="section-desc">
+          Visualisasi data populasi satwa liar kunci, ancaman utama, sebaran
+          spesies terancam, serta kondisi tutupan hutan di seluruh kepulauan
+          Indonesia berdasarkan data resmi terkini.
+        </p>
       </div>
-      <div class="chart-card">
-        <h4>Faktor Penyebab</h4>
-        <h3>Ancaman Utama Satwa Liar di Indonesia</h3>
-        <div class="chart-wrapper"><canvas id="causesChart"></canvas></div>
-        <div class="chart-source">
-          <span class="src-label">Sumber:</span>
-          BKSDA RI (2023) · KLHK Statistik LHK 2023 · WWF Indonesia · Traffic
-          Intl
-        </div>
-      </div>
-      <div class="chart-card wide">
-        <h4>Sebaran Spesies Terancam</h4>
-        <h3>Jumlah Spesies Terancam per Pulau & Kelompok Taksa (CR+EN+VU)</h3>
-        <div class="chart-wrapper"><canvas id="regionalChart"></canvas></div>
-        <div class="chart-source">
-          <span class="src-label">Sumber:</span>
-          IUCN Red List (2024) · BRIN — Biota Indonesia (2023) · Kementerian
-          LHK 2023
-        </div>
-      </div>
-      <div class="chart-card">
-        <h4>Tutupan Hutan & Deforestasi</h4>
-        <h3>Hutan Tersisa vs Kehilangan Hutan 2000–2023 (juta ha)</h3>
-        <div class="chart-wrapper"><canvas id="recoveryChart"></canvas></div>
-        <div class="chart-source">
-          <span class="src-label">Sumber:</span>
-          KLHK RI (2023) · Forest Watch Indonesia (2023) · Global Forest Watch
-          (2024)
-        </div>
-      </div>
-    </div>
-
-    <!-- BLOK REFERENSI LENGKAP -->
-    <div class="reference-block">
-      <div class="ref-header">
-        <span class="ref-icon">📚</span>
-        <span>Referensi &amp; Sumber Data</span>
-      </div>
-      <div class="ref-grid">
-        <div class="ref-item">
-          <div class="ref-num">01</div>
-          <div class="ref-content">
-            <div class="ref-title">IUCN Red List of Threatened Species</div>
-            <div class="ref-detail">
-              International Union for Conservation of Nature, 2024. Versi
-              2024-1. Data populasi Harimau Sumatera (<em>Panthera tigris sumatrae</em>), Orangutan Sumatera (<em>Pongo
-                abelii</em>), Badak Jawa (<em>Rhinoceros sondaicus</em>), Gajah Sumatera (<em>Elephas maximus
-                sumatranus</em>).
-            </div>
-            <a class="ref-link" href="https://www.iucnredlist.org" target="_blank">iucnredlist.org →</a>
+      <div class="dashboard-grid">
+        <div class="chart-card wide">
+          <h4>Tren Populasi 1980–2024</h4>
+          <h3>Dinamika Populasi 4 Satwa Kunci Indonesia</h3>
+          <div class="chart-wrapper">
+            <canvas id="populationChart"></canvas>
+          </div>
+          <div class="chart-source">
+            <span class="src-label">Sumber:</span>
+            IUCN Red List (2024) · WWF Indonesia · Kementerian LHK RI · BRIN
           </div>
         </div>
-        <div class="ref-item">
-          <div class="ref-num">02</div>
-          <div class="ref-content">
-            <div class="ref-title">
-              Kementerian LHK RI — Statistik LHK 2023
-            </div>
-            <div class="ref-detail">
-              Buku Statistik Lingkungan Hidup dan Kehutanan 2023. Jakarta:
-              Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia.
-              Data tutupan hutan, deforestasi, dan kawasan konservasi
-              nasional.
-            </div>
-            <a class="ref-link" href="https://www.menlhk.go.id" target="_blank">menlhk.go.id →</a>
+        <div class="chart-card">
+          <h4>Faktor Penyebab</h4>
+          <h3>Ancaman Utama Satwa Liar di Indonesia</h3>
+          <div class="chart-wrapper"><canvas id="causesChart"></canvas></div>
+          <div class="chart-source">
+            <span class="src-label">Sumber:</span>
+            BKSDA RI (2023) · KLHK Statistik LHK 2023 · WWF Indonesia · Traffic
+            Intl
           </div>
         </div>
-        <div class="ref-item">
-          <div class="ref-num">03</div>
-          <div class="ref-content">
-            <div class="ref-title">WWF Indonesia — Living Planet Report</div>
-            <div class="ref-detail">
-              WWF Indonesia, 2023. Laporan Satwa Liar Indonesia: Ancaman dan
-              Upaya Konservasi. Jakarta: WWF-Indonesia. Data ancaman,
-              perburuan, dan program pemulihan spesies.
-            </div>
-            <a class="ref-link" href="https://www.wwf.id" target="_blank">wwf.id →</a>
+        <div class="chart-card wide">
+          <h4>Sebaran Spesies Terancam</h4>
+          <h3>Jumlah Spesies Terancam per Pulau & Kelompok Taksa (CR+EN+VU)</h3>
+          <div class="chart-wrapper"><canvas id="regionalChart"></canvas></div>
+          <div class="chart-source">
+            <span class="src-label">Sumber:</span>
+            IUCN Red List (2024) · BRIN — Biota Indonesia (2023) · Kementerian
+            LHK 2023
           </div>
         </div>
-        <div class="ref-item">
-          <div class="ref-num">04</div>
-          <div class="ref-content">
-            <div class="ref-title">BRIN — Biota Indonesia 2023</div>
-            <div class="ref-detail">
-              Badan Riset dan Inovasi Nasional (BRIN), 2023. Keanekaragaman
-              Hayati Indonesia: Status dan Tren. Jakarta: BRIN Press. Data
-              sebaran spesies endemik dan status konservasi per pulau.
-            </div>
-            <a class="ref-link" href="https://www.brin.go.id" target="_blank">brin.go.id →</a>
-          </div>
-        </div>
-        <div class="ref-item">
-          <div class="ref-num">05</div>
-          <div class="ref-content">
-            <div class="ref-title">Forest Watch Indonesia (FWI) 2023</div>
-            <div class="ref-detail">
-              FWI, 2023. Potret Keadaan Hutan Indonesia Periode 2019–2023.
-              Bogor: Forest Watch Indonesia. Data kehilangan tutupan hutan
-              primer per pulau dan provinsi.
-            </div>
-            <a class="ref-link" href="https://fwi.or.id" target="_blank">fwi.or.id →</a>
-          </div>
-        </div>
-        <div class="ref-item">
-          <div class="ref-num">06</div>
-          <div class="ref-content">
-            <div class="ref-title">Global Forest Watch (GFW) 2024</div>
-            <div class="ref-detail">
-              Hansen, M.C. et al. (2024). Global Forest Watch Interactive
-              Platform. University of Maryland. Analisis citra satelit
-              kehilangan dan keuntungan tutupan pohon Indonesia 2000–2023.
-            </div>
-            <a class="ref-link" href="https://www.globalforestwatch.org" target="_blank">globalforestwatch.org →</a>
-          </div>
-        </div>
-        <div class="ref-item">
-          <div class="ref-num">07</div>
-          <div class="ref-content">
-            <div class="ref-title">
-              BKSDA RI — Laporan Penegakan Hukum 2023
-            </div>
-            <div class="ref-detail">
-              Balai Konservasi Sumber Daya Alam, 2023. Laporan Tahunan
-              Penegakan Hukum Satwa Liar. Jakarta: Ditjen KSDAE–KLHK. Data
-              kasus perburuan, perdagangan, dan konflik manusia–satwa.
-            </div>
-            <a class="ref-link" href="https://ksdae.menlhk.go.id" target="_blank">ksdae.menlhk.go.id →</a>
-          </div>
-        </div>
-        <div class="ref-item">
-          <div class="ref-num">08</div>
-          <div class="ref-content">
-            <div class="ref-title">
-              Traffic International — Wildlife Trade Reports
-            </div>
-            <div class="ref-detail">
-              Traffic International, 2022. Illegal Wildlife Trade in
-              Indonesia: Patterns, Seizures, and Implications. Cambridge:
-              Traffic. Data perdagangan satwa ilegal di Indonesia dan jalur
-              perdagangan regional.
-            </div>
-            <a class="ref-link" href="https://www.traffic.org" target="_blank">traffic.org →</a>
+        <div class="chart-card">
+          <h4>Tutupan Hutan & Deforestasi</h4>
+          <h3>Hutan Tersisa vs Kehilangan Hutan 2000–2023 (juta ha)</h3>
+          <div class="chart-wrapper"><canvas id="recoveryChart"></canvas></div>
+          <div class="chart-source">
+            <span class="src-label">Sumber:</span>
+            KLHK RI (2023) · Forest Watch Indonesia (2023) · Global Forest Watch
+            (2024)
           </div>
         </div>
       </div>
-      <div class="ref-note">
-        <span class="ref-note-icon">ℹ️</span>
-        Data yang ditampilkan merupakan estimasi terbaik berdasarkan publikasi
-        resmi. Beberapa nilai (khususnya tren historis) merupakan rekonstruksi
-        berdasarkan berbagai sumber dan dapat berbeda dengan angka pasti di
-        lapangan. Nilai Orangutan Sumatera dan Gajah Sumatera pada Grafik 1
-        dibagi 10 agar terbaca dalam satu skala dengan Harimau Sumatera dan
-        Badak Jawa.
-      </div>
-    </div>
-  </section>
-  <!-- ====== SOROTAN SATWA ====== -->
-  <section id="animal-spotlight">
-    <div class="section-header" style="position: relative; z-index: 1">
-      <div class="section-label">Spesies Terancam Punah</div>
-      <h2 class="section-title">
-        Kenali Satwa yang <span>Kami Perjuangkan</span>
-      </h2>
-      <div class="section-rule"></div>
-      <p class="section-desc">
-        Setiap spesies tidak dapat tergantikan. Pelajari tentang hewan-hewan
-        yang berada di ambang kepunahan.
-      </p>
-    </div>
-    <div class="spotlight-grid">
-      <div class="animal-card">
-        <div class="animal-img">
-          <img src="assets/img/harimau.jpg" />
-        </div>
-        <div class="animal-info">
-          <span class="animal-status status-critical">Kritis Terancam Punah</span>
-          <div class="animal-name">Harimau Sumatera</div>
-          <div class="animal-scientific">Panthera tigris sumatrae</div>
-          <p class="animal-desc">
-            Satu-satunya subspesies harimau yang tersisa di Indonesia...
-          </p>
-        </div>
-      </div>
 
-      <div class="animal-card">
-        <div class="animal-img">
-          <img src="assets/img/badakjawa.jpg" />
+      <div class="reference-block">
+        <div class="ref-header">
+          <span class="ref-icon">📚</span>
+          <span>Referensi &amp; Sumber Data</span>
         </div>
-        <div class="animal-info">
-          <span class="animal-status status-critical">Kritis Terancam Punah</span>
-          <div class="animal-name">Badak Jawa</div>
-          <div class="animal-scientific">Rhinoceros sondaicus</div>
-          <p class="animal-desc">Badak paling langka di dunia...</p>
+        <div class="ref-grid">
+          <div class="ref-item">
+            <div class="ref-num">01</div>
+            <div class="ref-content">
+              <div class="ref-title">IUCN Red List of Threatened Species</div>
+              <div class="ref-detail">
+                International Union for Conservation of Nature, 2024. Versi
+                2024-1. Data populasi Harimau Sumatera (<em
+                  >Panthera tigris sumatrae</em
+                >), Orangutan Sumatera (<em>Pongo abelii</em>), Badak Jawa (<em
+                  >Rhinoceros sondaicus</em
+                >), Gajah Sumatera (<em>Elephas maximus sumatranus</em>).
+              </div>
+              <a
+                class="ref-link"
+                href="https://www.iucnredlist.org"
+                target="_blank"
+                >iucnredlist.org →</a
+              >
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-num">02</div>
+            <div class="ref-content">
+              <div class="ref-title">
+                Kementerian LHK RI — Statistik LHK 2023
+              </div>
+              <div class="ref-detail">
+                Buku Statistik Lingkungan Hidup dan Kehutanan 2023. Jakarta:
+                Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia.
+                Data tutupan hutan, deforestasi, dan kawasan konservasi
+                nasional.
+              </div>
+              <a
+                class="ref-link"
+                href="https://www.menlhk.go.id"
+                target="_blank"
+                >menlhk.go.id →</a
+              >
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-num">03</div>
+            <div class="ref-content">
+              <div class="ref-title">WWF Indonesia — Living Planet Report</div>
+              <div class="ref-detail">
+                WWF Indonesia, 2023. Laporan Satwa Liar Indonesia: Ancaman dan
+                Upaya Konservasi. Jakarta: WWF-Indonesia. Data ancaman,
+                perburuan, dan program pemulihan spesies.
+              </div>
+              <a class="ref-link" href="https://www.wwf.id" target="_blank"
+                >wwf.id →</a
+              >
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-num">04</div>
+            <div class="ref-content">
+              <div class="ref-title">BRIN — Biota Indonesia 2023</div>
+              <div class="ref-detail">
+                Badan Riset dan Inovasi Nasional (BRIN), 2023. Keanekaragaman
+                Hayati Indonesia: Status dan Tren. Jakarta: BRIN Press. Data
+                sebaran spesies endemik dan status konservasi per pulau.
+              </div>
+              <a class="ref-link" href="https://www.brin.go.id" target="_blank"
+                >brin.go.id →</a
+              >
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-num">05</div>
+            <div class="ref-content">
+              <div class="ref-title">Forest Watch Indonesia (FWI) 2023</div>
+              <div class="ref-detail">
+                FWI, 2023. Potret Keadaan Hutan Indonesia Periode 2019–2023.
+                Bogor: Forest Watch Indonesia. Data kehilangan tutupan hutan
+                primer per pulau dan provinsi.
+              </div>
+              <a class="ref-link" href="https://fwi.or.id" target="_blank"
+                >fwi.or.id →</a
+              >
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-num">06</div>
+            <div class="ref-content">
+              <div class="ref-title">Global Forest Watch (GFW) 2024</div>
+              <div class="ref-detail">
+                Hansen, M.C. et al. (2024). Global Forest Watch Interactive
+                Platform. University of Maryland. Analisis citra satelit
+                kehilangan dan keuntungan tutupan pohon Indonesia 2000–2023.
+              </div>
+              <a
+                class="ref-link"
+                href="https://www.globalforestwatch.org"
+                target="_blank"
+                >globalforestwatch.org →</a
+              >
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-num">07</div>
+            <div class="ref-content">
+              <div class="ref-title">
+                BKSDA RI — Laporan Penegakan Hukum 2023
+              </div>
+              <div class="ref-detail">
+                Balai Konservasi Sumber Daya Alam, 2023. Laporan Tahunan
+                Penegakan Hukum Satwa Liar. Jakarta: Ditjen KSDAE–KLHK. Data
+                kasus perburuan, perdagangan, dan konflik manusia–satwa.
+              </div>
+              <a
+                class="ref-link"
+                href="https://ksdae.menlhk.go.id"
+                target="_blank"
+                >ksdae.menlhk.go.id →</a
+              >
+            </div>
+          </div>
+          <div class="ref-item">
+            <div class="ref-num">08</div>
+            <div class="ref-content">
+              <div class="ref-title">
+                Traffic International — Wildlife Trade Reports
+              </div>
+              <div class="ref-detail">
+                Traffic International, 2022. Illegal Wildlife Trade in
+                Indonesia: Patterns, Seizures, and Implications. Cambridge:
+                Traffic. Data perdagangan satwa ilegal di Indonesia dan jalur
+                perdagangan regional.
+              </div>
+              <a class="ref-link" href="https://www.traffic.org" target="_blank"
+                >traffic.org →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="ref-note">
+          <span class="ref-note-icon">ℹ️</span>
+          Data yang ditampilkan merupakan estimasi terbaik berdasarkan publikasi
+          resmi. Beberapa nilai (khususnya tren historis) merupakan rekonstruksi
+          berdasarkan berbagai sumber dan dapat berbeda dengan angka pasti di
+          lapangan. Nilai Orangutan Sumatera dan Gajah Sumatera pada Grafik 1
+          dibagi 10 agar terbaca dalam satu skala dengan Harimau Sumatera dan
+          Badak Jawa.
         </div>
       </div>
+    </section>
 
-      <div class="animal-card">
-        <div class="animal-img">
-          <img src="assets/img/orangutansumatera.jpg" />
+    <!-- ====== SOROTAN SATWA ====== -->
+    <section id="animal-spotlight">
+      <div class="section-header" style="position: relative; z-index: 1">
+        <div class="section-label">Spesies Terancam Punah</div>
+        <h2 class="section-title">
+          Kenali Satwa yang <span>Kami Perjuangkan</span>
+        </h2>
+        <div class="section-rule"></div>
+        <p class="section-desc">
+          Setiap spesies tidak dapat tergantikan. Klik kartu satwa untuk melihat
+          informasi lengkap tentang hewan yang berada di ambang kepunahan.
+        </p>
+      </div>
+      <div class="spotlight-grid">
+        <div class="animal-card">
+          <div class="animal-img">
+            <img src="assets/img/harimau.jpg" alt="Harimau Sumatera" />
+          </div>
+          <div class="animal-info">
+            <span class="animal-status status-critical"
+              >Kritis Terancam Punah</span
+            >
+            <div class="animal-name">Harimau Sumatera</div>
+            <div class="animal-scientific">Panthera tigris sumatrae</div>
+            <p class="animal-desc">
+              Satu-satunya subspesies harimau yang tersisa di Indonesia. Klik
+              untuk detail lengkap.
+            </p>
+          </div>
         </div>
-        <div class="animal-info">
-          <span class="animal-status status-critical">Kritis Terancam Punah</span>
-          <div class="animal-name">Orangutan Sumatera</div>
-          <div class="animal-scientific">Pongo abelii</div>
-          <p class="animal-desc">Kera besar paling cerdas...</p>
+        <div class="animal-card">
+          <div class="animal-img">
+            <img src="assets/img/badakjawa.jpg" alt="Badak Jawa" />
+          </div>
+          <div class="animal-info">
+            <span class="animal-status status-critical"
+              >Kritis Terancam Punah</span
+            >
+            <div class="animal-name">Badak Jawa</div>
+            <div class="animal-scientific">Rhinoceros sondaicus</div>
+            <p class="animal-desc">
+              Badak paling langka di dunia. Klik untuk detail lengkap.
+            </p>
+          </div>
+        </div>
+        <div class="animal-card">
+          <div class="animal-img">
+            <img
+              src="assets/img/orangutansumatera.jpg"
+              alt="Orangutan Sumatera"
+            />
+          </div>
+          <div class="animal-info">
+            <span class="animal-status status-critical"
+              >Kritis Terancam Punah</span
+            >
+            <div class="animal-name">Orangutan Sumatera</div>
+            <div class="animal-scientific">Pongo abelii</div>
+            <p class="animal-desc">
+              Kera besar paling cerdas di Asia. Klik untuk detail lengkap.
+            </p>
+          </div>
+        </div>
+        <div class="animal-card">
+          <div class="animal-img">
+            <img src="assets/img/gajahsumatera.jpg" alt="Gajah Sumatera" />
+          </div>
+          <div class="animal-info">
+            <span class="animal-status status-critical"
+              >Kritis Terancam Punah</span
+            >
+            <div class="animal-name">Gajah Sumatera</div>
+            <div class="animal-scientific">Elephas maximus sumatranus</div>
+            <p class="animal-desc">
+              Subspesies gajah Asia terkecil. Klik untuk detail lengkap.
+            </p>
+          </div>
+        </div>
+        <div class="animal-card">
+          <div class="animal-img">
+            <img src="assets/img/jalakbali.jpg" alt="Jalak Bali" />
+          </div>
+          <div class="animal-info">
+            <span class="animal-status status-critical"
+              >Kritis Terancam Punah</span
+            >
+            <div class="animal-name">Jalak Bali</div>
+            <div class="animal-scientific">Leucopsar rothschildi</div>
+            <p class="animal-desc">
+              Burung endemik kebanggaan Pulau Bali. Klik untuk detail lengkap.
+            </p>
+          </div>
+        </div>
+        <div class="animal-card">
+          <div class="animal-img">
+            <img src="assets/img/komodo.jpg" alt="Komodo" />
+          </div>
+          <div class="animal-info">
+            <span class="animal-status status-endangered">Terancam Punah</span>
+            <div class="animal-name">Komodo</div>
+            <div class="animal-scientific">Varanus komodoensis</div>
+            <p class="animal-desc">
+              Kadal terbesar di dunia. Klik untuk detail lengkap.
+            </p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="animal-card">
-        <div class="animal-img">
-          <img src="assets/img/gajahsumatera.jpg" />
-        </div>
-        <div class="animal-info">
-          <span class="animal-status status-critical">Kritis Terancam Punah</span>
-          <div class="animal-name">Gajah Sumatera</div>
-          <div class="animal-scientific">Elephas maximus sumatranus</div>
-          <p class="animal-desc">Subspesies gajah Asia terkecil...</p>
-        </div>
+    <!-- ====== PELAPORAN INSIDEN ====== -->
+    <section id="incident-reporting">
+      <div class="section-header">
+        <div class="section-label">Sistem Pelaporan</div>
+        <h2 class="section-title">Laporkan <span>Kejadian Satwa Liar</span></h2>
+        <div class="section-rule"></div>
+        <p class="section-desc">
+          Laporan Anda dapat menyelamatkan jiwa. Setiap kejadian yang dilaporkan
+          membantu ranger dan konservator merespons lebih cepat.
+        </p>
       </div>
-
-      <div class="animal-card">
-        <div class="animal-img">
-          <img src="assets/img/jalakbali.jpg" />
-        </div>
-        <div class="animal-info">
-          <span class="animal-status status-critical">Kritis Terancam Punah</span>
-          <div class="animal-name">Jalak Bali</div>
-          <div class="animal-scientific">Leucopsar rothschildi</div>
-          <p class="animal-desc">Burung endemik Bali...</p>
-        </div>
-      </div>
-
-      <div class="animal-card">
-        <div class="animal-img">
-          <img src="assets/img/komodo.jpg" />
-        </div>
-        <div class="animal-info">
-          <span class="animal-status status-endangered">Terancam Punah</span>
-          <div class="animal-name">Komodo</div>
-          <div class="animal-scientific">Varanus komodoensis</div>
-          <p class="animal-desc">Kadal terbesar di dunia...</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== PELAPORAN INSIDEN ====== -->
-  <section id="incident-reporting">
-    <div class="section-header">
-      <div class="section-label">Sistem Pelaporan</div>
-      <h2 class="section-title">Laporkan <span>Kejadian Satwa Liar</span></h2>
-      <div class="section-rule"></div>
-      <p class="section-desc">
-        Laporan Anda dapat menyelamatkan jiwa. Setiap kejadian yang dilaporkan
-        membantu ranger dan konservator merespons lebih cepat.
-      </p>
-    </div>
-    <div class="incident-layout">
-      <div class="report-form">
-        <h3 style="
+      <div class="incident-layout">
+        <!-- FORM KIRI -->
+        <div class="report-form">
+          <h3
+            style="
               font-family: var(--font-display);
               font-size: 1.5rem;
               font-weight: 300;
               margin-bottom: 1.6rem;
-            ">
-          Kirim Laporan Baru
-        </h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Jenis Kejadian</label>
-            <select class="form-select">
-              <option>Perburuan Liar / Poaching</option>
-              <option>Hewan Terluka</option>
-              <option>Satwa Masuk Pemukiman</option>
-              <option>Perusakan Habitat</option>
-              <option>Perdagangan Satwa Ilegal</option>
-              <option>Lainnya</option>
-            </select>
+            "
+          >
+            Kirim Laporan Baru
+          </h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label"
+                >Jenis Kejadian
+                <span style="color: var(--red-warn)">*</span></label
+              >
+              <select class="form-select" required>
+                <option value="">— Pilih Jenis —</option>
+                <option>Perburuan Liar / Poaching</option>
+                <option>Hewan Terluka</option>
+                <option>Satwa Masuk Pemukiman</option>
+                <option>Perusakan Habitat</option>
+                <option>Perdagangan Satwa Ilegal</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label"
+                >Jenis Hewan
+                <span style="color: var(--red-warn)">*</span></label
+              >
+              <select class="form-select" required>
+                <option value="">— Pilih Hewan —</option>
+                <option>Harimau / Kucing Besar</option>
+                <option>Gajah</option>
+                <option>Badak</option>
+                <option>Beruang</option>
+                <option>Primata</option>
+                <option>Burung</option>
+                <option>Reptil</option>
+                <option>Hewan Laut</option>
+                <option>Mamalia Lainnya</option>
+                <option>Tidak Diketahui</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Jenis Hewan</label>
-            <select class="form-select">
-              <option>Tidak Diketahui</option>
-              <option>Harimau / Kucing Besar</option>
-              <option>Gajah</option>
-              <option>Badak</option>
-              <option>Beruang</option>
-              <option>Primata</option>
-              <option>Burung</option>
-              <option>Reptil</option>
-              <option>Hewan Laut</option>
-              <option>Mamalia Lainnya</option>
-            </select>
+            <label class="form-label"
+              >Lokasi Kejadian
+              <span style="color: var(--red-warn)">*</span></label
+            >
+            <input
+              type="text"
+              class="form-input"
+              required
+              placeholder="Masukkan lokasi atau koordinat (mis. Kalimantan, Indonesia)"
+            />
           </div>
+          <div class="form-group">
+            <label class="form-label"
+              >Deskripsi Kejadian
+              <span style="color: var(--red-warn)">*</span></label
+            >
+            <textarea
+              class="form-textarea"
+              required
+              placeholder="Ceritakan apa yang Anda saksikan. Sertakan waktu, jumlah hewan, dan detail relevan lainnya..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">
+              Bukti Foto
+              <span
+                style="
+                  color: rgba(245, 242, 236, 0.3);
+                  font-weight: 400;
+                  font-size: 0.65rem;
+                  letter-spacing: 0;
+                  text-transform: none;
+                  margin-left: 0.3rem;
+                "
+                >(opsional)</span
+              >
+            </label>
+            <div
+              class="upload-area"
+              onclick="this.querySelector('input').click()"
+            >
+              <input
+                type="file"
+                accept="image/*"
+                style="display: none"
+                multiple
+              />
+              <div class="upload-icon">📷</div>
+              <div class="upload-text">
+                Klik untuk unggah foto atau seret &amp; lepas<br />
+                <span
+                  style="color: rgba(245, 242, 236, 0.25); font-size: 0.72rem"
+                  >PNG, JPG hingga 10MB</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">
+                Nama Anda
+                <span
+                  style="
+                    color: rgba(245, 242, 236, 0.3);
+                    font-weight: 400;
+                    font-size: 0.65rem;
+                    letter-spacing: 0;
+                    text-transform: none;
+                    margin-left: 0.3rem;
+                  "
+                  >(opsional)</span
+                >
+              </label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Pelapor anonim"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Kontak
+                <span
+                  style="
+                    color: rgba(245, 242, 236, 0.3);
+                    font-weight: 400;
+                    font-size: 0.65rem;
+                    letter-spacing: 0;
+                    text-transform: none;
+                    margin-left: 0.3rem;
+                  "
+                  >(opsional)</span
+                >
+              </label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Email atau telepon"
+              />
+            </div>
+          </div>
+          <p
+            style="
+              font-size: 0.7rem;
+              color: rgba(245, 242, 236, 0.28);
+              margin-bottom: 1rem;
+              margin-top: -0.3rem;
+            "
+          >
+            <span style="color: var(--red-warn)">*</span> Wajib diisi
+          </p>
+          <button
+            class="btn-primary"
+            style="width: 100%; justify-content: center; border-radius: 3px"
+            onclick="submitReport(this)"
+          >
+            <i class="fas fa-paper-plane"></i> Kirim Laporan
+          </button>
         </div>
-        <div class="form-group">
-          <label class="form-label">Lokasi</label>
-          <input type="text" class="form-input"
-            placeholder="Masukkan lokasi atau koordinat (mis. Kalimantan, Indonesia)" />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Deskripsi</label>
-          <textarea class="form-textarea"
-            placeholder="Ceritakan apa yang Anda saksikan. Sertakan waktu, jumlah hewan, dan detail relevan lainnya..."></textarea>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Bukti Foto</label>
-          <div class="upload-area" onclick="this.querySelector('input').click()">
-            <input type="file" accept="image/*" style="display: none" multiple />
-            <div class="upload-icon">📷</div>
-            <div class="upload-text">
-              Klik untuk unggah foto atau seret &amp; lepas<br /><span
-                style="color: rgba(245, 242, 236, 0.25); font-size: 0.72rem">PNG, JPG hingga 10MB</span>
+
+        <!-- TRACKER KANAN -->
+        <div class="incident-tracker">
+          <div class="tracker-title">Laporan Terkini</div>
+          <p class="tracker-subtitle">
+            Menampilkan 5 kejadian terbaru · Klik untuk detail
+          </p>
+          <div class="incident-card">
+            <div class="incident-header">
+              <span class="incident-id">#WG-2024-4821</span>
+              <span class="incident-status status-review">DITINJAU</span>
+            </div>
+            <div class="incident-title">
+              Dugaan aktivitas perburuan di dekat Ranthambore
+            </div>
+            <div class="incident-meta">
+              <span>🐅 Harimau</span><span>📍 Rajasthan, India</span
+              ><span>2 jam lalu</span>
+            </div>
+            <div class="incident-timeline">
+              <div class="timeline-step done"></div>
+              <div class="timeline-step active"></div>
+              <div class="timeline-step"></div>
+              <div class="timeline-step"></div>
+            </div>
+          </div>
+          <div class="incident-card">
+            <div class="incident-header">
+              <span class="incident-id">#WG-2024-4820</span>
+              <span class="incident-status status-resolved">SELESAI</span>
+            </div>
+            <div class="incident-title">
+              Kawanan gajah masuk lahan pertanian
+            </div>
+            <div class="incident-meta">
+              <span>🐘 Gajah</span><span>📍 Amboseli, Kenya</span
+              ><span>5 jam lalu</span>
+            </div>
+            <div class="incident-timeline">
+              <div class="timeline-step done"></div>
+              <div class="timeline-step done"></div>
+              <div class="timeline-step done"></div>
+              <div class="timeline-step done"></div>
+            </div>
+          </div>
+          <div class="incident-card">
+            <div class="incident-header">
+              <span class="incident-id">#WG-2024-4819</span>
+              <span class="incident-status status-pending">MENUNGGU</span>
+            </div>
+            <div class="incident-title">
+              Orangutan terluka terlihat dekat jalan logging
+            </div>
+            <div class="incident-meta">
+              <span>🦧 Primata</span><span>📍 Kalimantan, Indonesia</span
+              ><span>8 jam lalu</span>
+            </div>
+            <div class="incident-timeline">
+              <div class="timeline-step active"></div>
+              <div class="timeline-step"></div>
+              <div class="timeline-step"></div>
+              <div class="timeline-step"></div>
+            </div>
+          </div>
+          <div class="incident-card">
+            <div class="incident-header">
+              <span class="incident-id">#WG-2024-4818</span>
+              <span class="incident-status status-resolved">SELESAI</span>
+            </div>
+            <div class="incident-title">
+              Pasar perdagangan satwa ilegal teridentifikasi
+            </div>
+            <div class="incident-meta">
+              <span>🦜 Burung</span><span>📍 Bangkok, Thailand</span
+              ><span>1 hari lalu</span>
+            </div>
+            <div class="incident-timeline">
+              <div class="timeline-step done"></div>
+              <div class="timeline-step done"></div>
+              <div class="timeline-step done"></div>
+              <div class="timeline-step done"></div>
+            </div>
+          </div>
+          <div class="incident-card">
+            <div class="incident-header">
+              <span class="incident-id">#WG-2024-4817</span>
+              <span class="incident-status status-review">DITINJAU</span>
+            </div>
+            <div class="incident-title">
+              Cula badak ditemukan saat pemeriksaan bea cukai
+            </div>
+            <div class="incident-meta">
+              <span>🦏 Badak</span><span>📍 Bandara Nairobi</span
+              ><span>1 hari lalu</span>
+            </div>
+            <div class="incident-timeline">
+              <div class="timeline-step done"></div>
+              <div class="timeline-step active"></div>
+              <div class="timeline-step"></div>
+              <div class="timeline-step"></div>
             </div>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Nama Anda (opsional)</label>
-            <input type="text" class="form-input" placeholder="Pelapor anonim" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Kontak (opsional)</label>
-            <input type="text" class="form-input" placeholder="Email atau telepon" />
-          </div>
-        </div>
-        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 3px"
-          onclick="submitReport(this)">
-          <i class="fas fa-paper-plane"></i> Kirim Laporan
-        </button>
       </div>
-      <div class="incident-tracker">
-        <div class="tracker-title">Laporan Terkini</div>
-        <p class="tracker-subtitle">
-          Menampilkan 5 kejadian terbaru · Klik untuk detail
-        </p>
-        <div class="incident-card">
-          <div class="incident-header">
-            <span class="incident-id">#WG-2024-4821</span><span class="incident-status status-review">DITINJAU</span>
-          </div>
-          <div class="incident-title">
-            Dugaan aktivitas perburuan di dekat Ranthambore
-          </div>
-          <div class="incident-meta">
-            <span>🐅 Harimau</span><span>📍 Rajasthan, India</span><span>2 jam lalu</span>
-          </div>
-          <div class="incident-timeline">
-            <div class="timeline-step done"></div>
-            <div class="timeline-step active"></div>
-            <div class="timeline-step"></div>
-            <div class="timeline-step"></div>
-          </div>
-        </div>
-        <div class="incident-card">
-          <div class="incident-header">
-            <span class="incident-id">#WG-2024-4820</span><span class="incident-status status-resolved">SELESAI</span>
-          </div>
-          <div class="incident-title">
-            Kawanan gajah masuk lahan pertanian
-          </div>
-          <div class="incident-meta">
-            <span>🐘 Gajah</span><span>📍 Amboseli, Kenya</span><span>5 jam lalu</span>
-          </div>
-          <div class="incident-timeline">
-            <div class="timeline-step done"></div>
-            <div class="timeline-step done"></div>
-            <div class="timeline-step done"></div>
-            <div class="timeline-step done"></div>
-          </div>
-        </div>
-        <div class="incident-card">
-          <div class="incident-header">
-            <span class="incident-id">#WG-2024-4819</span><span class="incident-status status-pending">MENUNGGU</span>
-          </div>
-          <div class="incident-title">
-            Orangutan terluka terlihat dekat jalan logging
-          </div>
-          <div class="incident-meta">
-            <span>🦧 Primata</span><span>📍 Kalimantan, Indonesia</span><span>8 jam lalu</span>
-          </div>
-          <div class="incident-timeline">
-            <div class="timeline-step active"></div>
-            <div class="timeline-step"></div>
-            <div class="timeline-step"></div>
-            <div class="timeline-step"></div>
-          </div>
-        </div>
-        <div class="incident-card">
-          <div class="incident-header">
-            <span class="incident-id">#WG-2024-4818</span><span class="incident-status status-resolved">SELESAI</span>
-          </div>
-          <div class="incident-title">
-            Pasar perdagangan satwa ilegal teridentifikasi
-          </div>
-          <div class="incident-meta">
-            <span>🦜 Burung</span><span>📍 Bangkok, Thailand</span><span>1 hari lalu</span>
-          </div>
-          <div class="incident-timeline">
-            <div class="timeline-step done"></div>
-            <div class="timeline-step done"></div>
-            <div class="timeline-step done"></div>
-            <div class="timeline-step done"></div>
-          </div>
-        </div>
-        <div class="incident-card">
-          <div class="incident-header">
-            <span class="incident-id">#WG-2024-4817</span><span class="incident-status status-review">DITINJAU</span>
-          </div>
-          <div class="incident-title">
-            Cula badak ditemukan saat pemeriksaan bea cukai
-          </div>
-          <div class="incident-meta">
-            <span>🦏 Badak</span><span>📍 Bandara Nairobi</span><span>1 hari lalu</span>
-          </div>
-          <div class="incident-timeline">
-            <div class="timeline-step done"></div>
-            <div class="timeline-step active"></div>
-            <div class="timeline-step"></div>
-            <div class="timeline-step"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ====== DAMPAK KONSERVASI ====== -->
-  <section id="conservation-impact">
-    <div class="impact-bg" id="impactBg"></div>
-    <div class="impact-content">
-      <div class="section-label">Dampak Nyata</div>
-      <h2 style="
+    <!-- ====== DAMPAK KONSERVASI ====== -->
+    <section id="conservation-impact">
+      <div class="impact-bg" id="impactBg"></div>
+      <div class="impact-content">
+        <div class="section-label">Dampak Nyata</div>
+        <h2
+          style="
             font-family: var(--font-display);
             font-size: clamp(2.2rem, 4.5vw, 4rem);
             font-weight: 300;
             max-width: 580px;
             margin-bottom: 3.5rem;
             line-height: 1.1;
-          ">
-        Dampak Konservasi Kami<br /><em style="font-style: italic; color: var(--sage-pale)">Sejauh Ini</em>
-      </h2>
-      <div class="impact-cards">
-        <div class="impact-card">
-          <div class="impact-num" data-count="169420">0</div>
-          <div class="impact-label">Kejadian Diselesaikan</div>
-          <p class="impact-desc">
-            Berhasil menangani kejadian satwa liar, dari penindakan perburuan
-            hingga penyelamatan hewan terluka.
+          "
+        >
+          Dampak Konservasi Kami<br /><em
+            style="font-style: italic; color: var(--sage-pale)"
+            >Sejauh Ini</em
+          >
+        </h2>
+        <div class="impact-cards">
+          <div class="impact-card">
+            <div class="impact-num" data-count="169420">0</div>
+            <div class="impact-label">Kejadian Diselesaikan</div>
+            <p class="impact-desc">
+              Berhasil menangani kejadian satwa liar, dari penindakan perburuan
+              hingga penyelamatan hewan terluka.
+            </p>
+          </div>
+          <div class="impact-card">
+            <div class="impact-num" data-count="260000" data-suffix="+">0</div>
+            <div class="impact-label">Spesies Dipantau</div>
+            <p class="impact-desc">
+              Spesies yang aktif dilacak dengan kalung satelit, jebakan kamera,
+              dan tim lapangan terlatih.
+            </p>
+          </div>
+          <div class="impact-card">
+            <div class="impact-num" data-count="183">0</div>
+            <div class="impact-label">Negara Terlibat</div>
+            <p class="impact-desc">
+              Negara mitra yang berkontribusi ranger, data, dan dukungan
+              kebijakan untuk jaringan ini.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EDUKASI ====== -->
+    <section id="education">
+      <div class="section-header">
+        <div class="section-label">Pelajari &amp; Bertindak</div>
+        <h2 class="section-title">
+          Bagaimana Anda Bisa <span>Membuat Perubahan</span>
+        </h2>
+        <div class="section-rule"></div>
+        <p class="section-desc">
+          Tindakan individu terakumulasi. Berikut cara menjadi bagian dari
+          solusi nyata.
+        </p>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-icon">🚫</div>
+          <h3>Tolak Produk Ilegal</h3>
+          <p>
+            Jangan pernah membeli gading, cula badak, atau produk hewan eksotis.
+            Permintaan menciptakan pasar yang mendorong perburuan liar.
           </p>
         </div>
-        <div class="impact-card">
-          <div class="impact-num" data-count="260000" data-suffix="+">0</div>
-          <div class="impact-label">Spesies Dipantau</div>
-          <p class="impact-desc">
-            Spesies yang aktif dilacak dengan kalung satelit, jebakan kamera,
-            dan tim lapangan terlatih.
+        <div class="edu-card">
+          <div class="edu-icon">📢</div>
+          <h3>Laporkan Kejahatan Satwa</h3>
+          <p>
+            Lihat sesuatu, katakan sesuatu. Gunakan sistem pelaporan kami untuk
+            segera menandai aktivitas mencurigakan kepada pihak berwenang.
           </p>
         </div>
-        <div class="impact-card">
-          <div class="impact-num" data-count="183">0</div>
-          <div class="impact-label">Negara Terlibat</div>
-          <p class="impact-desc">
-            Negara mitra yang berkontribusi ranger, data, dan dukungan
-            kebijakan untuk jaringan ini.
+        <div class="edu-card">
+          <div class="edu-icon">🌲</div>
+          <h3>Lindungi Hutan</h3>
+          <p>
+            Dukung minyak sawit berkelanjutan, kayu bersertifikat, dan proyek
+            penghijauan kembali. Setiap pohon sangat berarti.
+          </p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">💚</div>
+          <h3>Dukung Konservasi</h3>
+          <p>
+            Donasikan ke program konservasi terpercaya, adopsi seekor hewan,
+            atau relawan bersama kelompok satwa liar lokal.
+          </p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">🌿</div>
+          <h3>Makan Secara Berkelanjutan</h3>
+          <p>
+            Kurangi konsumsi daging, pilih makanan laut bersertifikat MSC, dan
+            utamakan produk lokal musiman.
+          </p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">📸</div>
+          <h3>Wisata Satwa Etis</h3>
+          <p>
+            Pilih suaka alam daripada sirkus. Jangan pernah mendukung tempat
+            yang mengeksploitasi hewan liar untuk hiburan.
+          </p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">🏫</div>
+          <h3>Edukasi Orang Lain</h3>
+          <p>
+            Bagikan pengetahuan kepada teman dan keluarga. Kesadaran komunitas
+            adalah garis pertahanan pertama melawan kejahatan satwa liar.
+          </p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">🗳️</div>
+          <h3>Advokasi Kebijakan</h3>
+          <p>
+            Pilih pemimpin yang memprioritaskan perlindungan lingkungan. Tulis
+            surat kepada pembuat undang-undang mendukung legislasi satwa liar.
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ====== EDUKASI ====== -->
-  <section id="education">
-    <div class="section-header">
-      <div class="section-label">Pelajari &amp; Bertindak</div>
-      <h2 class="section-title">
-        Bagaimana Anda Bisa <span>Membuat Perubahan</span>
-      </h2>
-      <div class="section-rule"></div>
-      <p class="section-desc">
-        Tindakan individu terakumulasi. Berikut cara menjadi bagian dari
-        solusi nyata.
-      </p>
-    </div>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <div class="edu-icon">🚫</div>
-        <h3>Tolak Produk Ilegal</h3>
-        <p>
-          Jangan pernah membeli gading, cula badak, atau produk hewan eksotis.
-          Permintaan menciptakan pasar yang mendorong perburuan liar.
-        </p>
+    <!-- ====== KONTAK / FOOTER ====== -->
+    <section id="contact">
+      <div class="section-header">
+        <div class="section-label">Ikut Terlibat</div>
+        <h2 class="section-title">
+          Bergabunglah dengan <span>Jaringan LindungiSatwa</span>
+        </h2>
       </div>
-      <div class="edu-card">
-        <div class="edu-icon">📢</div>
-        <h3>Laporkan Kejahatan Satwa</h3>
-        <p>
-          Lihat sesuatu, katakan sesuatu. Gunakan sistem pelaporan kami untuk
-          segera menandai aktivitas mencurigakan kepada pihak berwenang.
-        </p>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">🌲</div>
-        <h3>Lindungi Hutan</h3>
-        <p>
-          Dukung minyak sawit berkelanjutan, kayu bersertifikat, dan proyek
-          penghijauan kembali. Setiap pohon sangat berarti.
-        </p>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">💚</div>
-        <h3>Dukung Konservasi</h3>
-        <p>
-          Donasikan ke program konservasi terpercaya, adopsi seekor hewan,
-          atau relawan bersama kelompok satwa liar lokal.
-        </p>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">🌿</div>
-        <h3>Makan Secara Berkelanjutan</h3>
-        <p>
-          Kurangi konsumsi daging, pilih makanan laut bersertifikat MSC, dan
-          utamakan produk lokal musiman.
-        </p>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">📸</div>
-        <h3>Wisata Satwa Etis</h3>
-        <p>
-          Pilih suaka alam daripada sirkus. Jangan pernah mendukung tempat
-          yang mengeksploitasi hewan liar untuk hiburan.
-        </p>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">🏫</div>
-        <h3>Edukasi Orang Lain</h3>
-        <p>
-          Bagikan pengetahuan kepada teman dan keluarga. Kesadaran komunitas
-          adalah garis pertahanan pertama melawan kejahatan satwa liar.
-        </p>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">🗳️</div>
-        <h3>Advokasi Kebijakan</h3>
-        <p>
-          Pilih pemimpin yang memprioritaskan perlindungan lingkungan. Tulis
-          surat kepada pembuat undang-undang mendukung legislasi satwa liar.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== KONTAK / FOOTER ====== -->
-  <section id="contact">
-    <div class="section-header">
-      <div class="section-label">Ikut Terlibat</div>
-      <h2 class="section-title">
-        Bergabunglah dengan <span>Jaringan LindungiSatwa</span>
-      </h2>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-brand">
-        <div class="nav-logo" style="margin-bottom: 1rem">
-          <div class="nav-logo-icon">🌿</div>
-          <span class="nav-logo-text">Lindungi<span>Satwa</span></span>
+      <div class="contact-grid">
+        <div class="contact-brand">
+          <div class="nav-logo" style="margin-bottom: 1rem">
+            <div class="nav-logo-icon">🌿</div>
+            <span class="nav-logo-text">Lindungi<span>Satwa</span></span>
+          </div>
+          <p>
+            Jaringan global ranger, ilmuwan, dan warga negara yang bersatu
+            melindungi spesies paling rentan di Bumi. Setiap laporan, setiap
+            donasi, setiap suara sangat berarti.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
-        <p>
-          Jaringan global ranger, ilmuwan, dan warga negara yang bersatu
-          melindungi spesies paling rentan di Bumi. Setiap laporan, setiap
-          donasi, setiap suara sangat berarti.
-        </p>
-        <div class="social-links">
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+        <div class="contact-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#stats-overview">Tentang</a></li>
+            <li><a href="#wildlife-map">Peta Satwa</a></li>
+            <li><a href="#dashboard">Dasbor</a></li>
+            <li><a href="#animal-spotlight">Galeri Satwa</a></li>
+            <li><a href="#incident-reporting">Laporkan Kejadian</a></li>
+          </ul>
+        </div>
+        <div class="contact-col">
+          <h4>Sumber Daya</h4>
+          <ul>
+            <li><a href="#">Daftar Merah IUCN</a></li>
+            <li><a href="#">Makalah Penelitian</a></li>
+            <li><a href="#">LSM Mitra</a></li>
+            <li><a href="#">Donasi</a></li>
+            <li><a href="#">Relawan</a></li>
+          </ul>
+        </div>
+        <div class="contact-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li><a href="#">info@lindungisatwa.org</a></li>
+            <li><a href="#">Pertanyaan Media</a></li>
+            <li><a href="#">Hotline Darurat</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat Penggunaan</a></li>
+          </ul>
         </div>
       </div>
-      <div class="contact-col">
-        <h4>Navigasi</h4>
-        <ul>
-          <li><a href="#stats-overview">Tentang</a></li>
-          <li><a href="#wildlife-map">Peta Satwa</a></li>
-          <li><a href="#dashboard">Dasbor</a></li>
-          <li><a href="#animal-spotlight">Galeri Satwa</a></li>
-          <li><a href="#incident-reporting">Laporkan Kejadian</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <span>© 2026 LindungiSatwa. Dibuat dengan 💚 untuk planet kita.</span>
+        <span
+          >Sumber data: <a href="#">IUCN</a> ·
+          <a href="#">Laporan Planet Hidup WWF</a> · <a href="#">CITES</a></span
+        >
       </div>
-      <div class="contact-col">
-        <h4>Sumber Daya</h4>
-        <ul>
-          <li><a href="#">Daftar Merah IUCN</a></li>
-          <li><a href="#">Makalah Penelitian</a></li>
-          <li><a href="#">LSM Mitra</a></li>
-          <li><a href="#">Donasi</a></li>
-          <li><a href="#">Relawan</a></li>
-        </ul>
-      </div>
-      <div class="contact-col">
-        <h4>Kontak</h4>
-        <ul>
-          <li><a href="#">info@lindungisatwa.org</a></li>
-          <li><a href="#">Pertanyaan Media</a></li>
-          <li><a href="#">Hotline Darurat</a></li>
-          <li><a href="#">Kebijakan Privasi</a></li>
-          <li><a href="#">Syarat Penggunaan</a></li>
-        </ul>
+    </section>
+
+    <!-- ====== SUCCESS POPUP ====== -->
+    <div id="successOverlay" class="popup-overlay">
+      <div class="popup-box success-popup">
+        <button class="popup-close" onclick="closeSuccessPopup()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="success-icon-wrap">
+          <div class="success-ring"></div>
+          <span class="success-icon">✅</span>
+        </div>
+        <h3 class="success-title">Laporan Berhasil Dikirim!</h3>
+        <p class="success-subtitle">
+          Terima kasih telah berkontribusi. Tim kami akan segera meninjau
+          laporan Anda dan mengambil tindakan yang diperlukan.
+        </p>
+        <div class="success-meta">
+          <div class="success-meta-item">
+            <span class="success-meta-icon">🕐</span>
+            <div>
+              <div class="success-meta-label">Waktu Respons</div>
+              <div class="success-meta-val">2–4 Jam</div>
+            </div>
+          </div>
+          <div class="success-meta-item">
+            <span class="success-meta-icon">🔍</span>
+            <div>
+              <div class="success-meta-label">Status Awal</div>
+              <div class="success-meta-val">Dalam Peninjauan</div>
+            </div>
+          </div>
+          <div class="success-meta-item">
+            <span class="success-meta-icon">📋</span>
+            <div>
+              <div class="success-meta-label">ID Laporan</div>
+              <div class="success-meta-val success-id" id="generatedId">
+                #WG-2026-XXXX
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn-primary"
+          onclick="closeSuccessPopup()"
+          style="width: 100%; justify-content: center; margin-top: 0.5rem"
+        >
+          <i class="fas fa-check"></i> Tutup
+        </button>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 LindungiSatwa. Dibuat dengan 💚 untuk planet kita.</span>
-      <span>Sumber data: <a href="#">IUCN</a> ·
-        <a href="#">Laporan Planet Hidup WWF</a> · <a href="#">CITES</a></span>
+
+    <!-- ====== ANIMAL DETAIL MODAL ====== -->
+    <div id="animalModal" class="popup-overlay">
+      <div class="popup-box animal-popup">
+        <button class="popup-close" onclick="closeAnimalModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="amodal-header">
+          <img class="amodal-img" src="" alt="" />
+          <div class="amodal-header-info">
+            <span class="animal-status status-critical amodal-status"
+              >Kritis Terancam Punah</span
+            >
+            <h2 class="amodal-name"></h2>
+            <p class="amodal-scientific"></p>
+            <div class="amodal-badges">
+              <span class="amodal-badge"
+                ><i class="fas fa-dna"></i> <span class="amodal-iucn"></span
+              ></span>
+              <span class="amodal-badge trend-badge"
+                ><i class="fas fa-chart-line"></i> Tren:
+                <span class="amodal-trend"></span
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="amodal-body">
+          <p class="amodal-desc"></p>
+          <div class="amodal-fact-box">
+            <span class="amodal-fact-icon">💡</span>
+            <p class="amodal-fact"></p>
+          </div>
+          <div class="amodal-grid">
+            <div class="amodal-detail">
+              <div class="amodal-detail-label">
+                <i class="fas fa-paw"></i> Estimasi Populasi
+              </div>
+              <div class="amodal-detail-val amodal-pop"></div>
+            </div>
+            <div class="amodal-detail">
+              <div class="amodal-detail-label">
+                <i class="fas fa-tree"></i> Habitat Utama
+              </div>
+              <div class="amodal-detail-val amodal-habitat"></div>
+            </div>
+            <div class="amodal-detail">
+              <div class="amodal-detail-label">
+                <i class="fas fa-exclamation-triangle"></i> Ancaman Utama
+              </div>
+              <div class="amodal-detail-val amodal-threats"></div>
+            </div>
+            <div class="amodal-detail">
+              <div class="amodal-detail-label">
+                <i class="fas fa-shield-alt"></i> Upaya Konservasi
+              </div>
+              <div class="amodal-detail-val amodal-conservation"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
