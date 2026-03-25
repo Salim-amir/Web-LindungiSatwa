@@ -389,8 +389,7 @@ nav.scrolled {
       rgba(8, 15, 8, 0.55) 55%,
       var(--ink) 100%
     ),
-    url("../assets/img/komodo-hero.jpeg")
-      center/cover no-repeat;
+    url("../assets/img/komodo-hero.jpeg") center/cover no-repeat;
   transform: translateZ(0);
   will-change: transform;
 }
@@ -801,7 +800,7 @@ nav.scrolled {
 .map-main {
   position: relative;
   aspect-ratio: 900 / 400;
-  background: url('../assets/img/peta-indo.png') center/cover no-repeat;
+  background: url("../assets/img/peta-indo.png") center/cover no-repeat;
 }
 
 /* TITIK */
@@ -815,7 +814,7 @@ nav.scrolled {
 
 .map-point:hover {
   fill: #ffcc00;
-   stroke-opacity: 0.8;
+  stroke-opacity: 0.8;
   r: 10;
 }
 
@@ -844,7 +843,6 @@ nav.scrolled {
   margin: 2px 0;
 }
 
-
 /* ===== DASHBOARD ===== */
 #dashboard {
   padding: var(--section-pad) 3.5rem;
@@ -864,7 +862,7 @@ nav.scrolled {
 }
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr !important;
   gap: 1px;
   margin-top: 3rem;
   background: rgba(245, 242, 236, 0.05);
@@ -881,7 +879,7 @@ nav.scrolled {
   background: var(--glass-hover);
 }
 .chart-card.wide {
-  grid-column: span 2;
+  grid-column: span 2 !important;
 }
 .chart-card h4 {
   font-size: 0.65rem;
@@ -899,7 +897,10 @@ nav.scrolled {
 }
 .chart-wrapper {
   position: relative;
-  height: 200px;
+  height: 240px !important;
+}
+.chart-card:not(.wide) .chart-wrapper {
+  height: 260px !important;
 }
 
 /* ===== ANIMAL SPOTLIGHT ===== */
@@ -1294,8 +1295,7 @@ nav.scrolled {
   inset: -80px;
   background:
     linear-gradient(rgba(8, 15, 8, 0.8), rgba(8, 15, 8, 0.8)),
-    url("../assets/img/tanduk.jpg")
-      center/cover no-repeat;
+    url("../assets/img/tanduk.jpg") center/cover no-repeat;
   will-change: transform;
 }
 .impact-content {
@@ -1719,20 +1719,37 @@ nav.scrolled {
   animation: fieldShake 0.35s ease;
 }
 @keyframes fieldShake {
-  0%, 100% { transform: translateX(0); }
-  20%       { transform: translateX(-5px); }
-  60%       { transform: translateX(4px); }
-  80%       { transform: translateX(-3px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  60% {
+    transform: translateX(4px);
+  }
+  80% {
+    transform: translateX(-3px);
+  }
 }
-
 .btn-shake {
   animation: btnShake 0.5s ease;
 }
 @keyframes btnShake {
-  0%, 100% { transform: translateX(0); }
-  15%       { transform: translateX(-6px); }
-  45%       { transform: translateX(5px); }
-  75%       { transform: translateX(-4px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-6px);
+  }
+  45% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
 }
 
 /* ===== INCIDENT LAYOUT ALIGNMENT ===== */
@@ -1747,7 +1764,6 @@ nav.scrolled {
 .incident-tracker {
   height: 100%;
 }
-/* Laporan terkini cards fill space */
 .incident-tracker > .incident-card:first-of-type {
   border-radius: 4px 4px 0 0;
 }
@@ -1772,8 +1788,10 @@ nav.scrolled {
   backdrop-filter: blur(24px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s, transform 0.3s var(--ease-out-expo);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  transition:
+    opacity 0.3s,
+    transform 0.3s var(--ease-out-expo);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
   white-space: nowrap;
 }
 .toast-notification.toast-visible {
@@ -1814,12 +1832,26 @@ nav.scrolled {
   background: var(--ink-2);
   border: 1px solid rgba(122, 171, 122, 0.15);
   border-radius: 6px;
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(122, 171, 122, 0.05);
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(122, 171, 122, 0.05);
   transform: translateY(28px) scale(0.97);
   opacity: 0;
-  transition: transform 0.45s var(--ease-out-expo), opacity 0.4s var(--ease-out-expo);
+  transition:
+    transform 0.45s var(--ease-out-expo),
+    opacity 0.4s var(--ease-out-expo);
   max-height: 90vh;
   overflow-y: auto;
+}
+.popup-box::-webkit-scrollbar {
+  width: 3px;
+}
+.popup-box::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+.popup-box::-webkit-scrollbar-thumb {
+  background: var(--forest-mid);
+  border-radius: 2px;
 }
 
 .popup-close {
@@ -1870,8 +1902,15 @@ nav.scrolled {
   animation: ringPulse 2.4s ease infinite;
 }
 @keyframes ringPulse {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50%       { transform: scale(1.18); opacity: 0.15; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.15;
+  }
 }
 .success-icon {
   font-size: 2.8rem;
@@ -1879,8 +1918,14 @@ nav.scrolled {
   animation: iconPop 0.5s 0.15s var(--ease-out-expo) both;
 }
 @keyframes iconPop {
-  from { transform: scale(0.5); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .success-title {
   font-family: var(--font-display);
@@ -1934,6 +1979,113 @@ nav.scrolled {
 }
 .success-id {
   color: var(--sky-pale) !important;
+}
+
+/* ===== PHOTO UPLOAD PREVIEW ===== */
+.upload-drag {
+  border-color: var(--sage) !important;
+  background: rgba(122, 171, 122, 0.05) !important;
+}
+
+.upload-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.preview-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  opacity: 0;
+  transform: scale(0.85);
+  transition:
+    opacity 0.25s var(--ease-out-expo),
+    transform 0.25s var(--ease-out-expo);
+  border: 1px solid rgba(245, 242, 236, 0.1);
+  background: var(--ink-3);
+  cursor: default;
+}
+.preview-item.preview-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.preview-item.preview-exit {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 8, 4, 0.85) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.preview-item:hover .preview-overlay {
+  opacity: 1;
+}
+
+.preview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.preview-name {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: rgba(245, 242, 236, 0.9);
+  line-height: 1.2;
+  word-break: break-all;
+}
+.preview-size {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--sage);
+}
+
+.preview-remove {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 22px;
+  height: 22px;
+  background: rgba(192, 57, 43, 0.85);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.55rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition:
+    opacity 0.2s,
+    transform 0.2s,
+    background 0.2s;
+  transform: scale(0.8);
+}
+.preview-item:hover .preview-remove {
+  opacity: 1;
+  transform: scale(1);
+}
+.preview-remove:hover {
+  background: rgba(192, 57, 43, 1);
+  transform: scale(1.1) !important;
 }
 
 /* ===== ANIMAL MODAL ===== */
@@ -2070,12 +2222,35 @@ nav.scrolled {
   font-weight: 300;
 }
 
-/* Scrollbar untuk popup */
-.popup-box::-webkit-scrollbar { width: 3px; }
-.popup-box::-webkit-scrollbar-track { background: var(--ink); }
-.popup-box::-webkit-scrollbar-thumb { background: var(--forest-mid); border-radius: 2px; }
-
-/* ===== RESPONSIVE POPUP ===== */
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .chart-card.wide {
+    grid-column: span 1 !important;
+  }
+  .ref-grid {
+    grid-template-columns: 1fr;
+  }
+  .success-meta {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .chart-card.wide {
+    grid-column: span 1 !important;
+  }
+  .ref-item {
+    padding: 1rem 1.1rem;
+  }
+  .upload-preview {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 640px) {
   .amodal-header {
     grid-template-columns: 1fr;
@@ -2097,7 +2272,7 @@ nav.scrolled {
   .amodal-grid {
     grid-template-columns: 1fr;
   }
-  .success-meta {
-    grid-template-columns: 1fr;
+  .upload-preview {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
